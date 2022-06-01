@@ -1,0 +1,178 @@
+.requests_page{
+    background: $blue_4;
+    padding-bottom: var(--spacing_2);
+    margin-bottom: var(--spacing_4);
+    border-bottom-left-radius: 100px;
+    .container{
+        .block_1{
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+            padding-bottom: var(--spacing_2);
+            @include breakpoint(md) {
+                flex-direction: column;
+            }
+            >*{
+                width: 50%;
+                @include breakpoint(md) {
+                    width: 100%;
+                }
+            }
+            p{
+                padding-bottom: var(--spacing_8);
+            }
+            .heading{
+                line-height: 0.7;
+            }
+        }
+        .block_2{
+            column-count: 2;
+            column-gap: var(--spacing_6);
+            @include breakpoint(xl) {
+               column-gap: var(--spacing_8);
+            }
+            @include breakpoint(sm) {
+               column-count: 1;
+            }
+        }
+    }
+}
+
+.request_item{
+    margin-bottom: var(--spacing_6);
+    background: $white;
+    border-bottom-right-radius: 50px;
+    height: fit-content;
+    display: grid;
+    grid-template-rows: 1fr auto;
+    break-inside: avoid;
+    @include breakpoint(xl) {
+       margin-bottom: var(--spacing_8);
+    }
+    .group{
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+    .top{
+        display: flex;
+        @include breakpoint(lg) {
+            flex-direction: column;
+        }
+        .column{
+            width: 50%;
+            @include breakpoint(lg) {
+               width: 100%;
+            }
+            &:first-child{
+                background: $blue_5;
+                .group{
+                    font-weight: 800;
+                }
+                .btn-extra{
+                    padding: var(--spacing_10)  var(--spacing_8) var(--spacing_8);
+                    @include breakpoint(sm) {
+                       display: none;
+                    }
+                    &.opened{
+                        opacity: 0;
+                        pointer-events: none;
+                    }
+                }
+            }
+            &:last-child{
+                padding: var(--spacing_8);
+                display: flex;
+                flex-direction: column;
+                justify-content: space-between;
+                .group{
+                    color: $blue_3;
+                }
+                .btn-extra{
+                    display: none;
+                    @include breakpoint(sm) {
+                        display: block;
+                        margin: var(--spacing_8) auto var(--spacing_10) ;
+                    }
+                    &.opened{
+                        opacity: 0;
+                        pointer-events: none;
+                    }
+                }
+            }
+            .subtitle_2{
+                padding: var(--spacing_10) 0;
+            }
+            .btn-secondary{
+                margin: var(--spacing_10) auto 0;
+                @include breakpoint(sm) {
+                    margin: var(--spacing_6) auto 0;
+                }
+            }
+            .wrap{
+                display: flex;
+                flex-direction: column;
+
+            }
+        }
+        .img_wrap{
+            --radius: 200px;
+            overflow: hidden;
+            border-bottom-left-radius: var(--radius);
+            border-bottom-right-radius: var(--radius);
+            min-height: 245px;
+            position: relative;
+            img{
+                height: 100%;
+                width: 100%;
+                object-fit: cover;
+                position: absolute;
+            }
+        }
+        .rating{
+            padding: var(--spacing_8)  var(--spacing_8) 0;
+            @include breakpoint(sm) {
+                padding: var(--spacing_8);
+            }
+            >p {
+                font-weight: 500;
+            }
+            .line{
+                background: $blue_3;
+                width: 100%;
+                height: 11px;
+                overflow: hidden;
+                border-radius: 100px;
+                margin: var(--spacing_13) 0;
+                span{
+                    height: 100%;
+                    background: $blue_1;
+                    display: block;
+                    border-radius: 110px;
+                }
+            }
+        }
+    }
+    .bottom{
+        transition: 1s ease;
+        height: 0;
+        background: $blue_5;
+        overflow: hidden;
+        border-bottom-right-radius: 50px;
+        p{
+            padding-bottom: var(--spacing_10);
+        }
+        .cover{
+            padding: var(--spacing_8);
+            height: fit-content;
+        }
+        &.opened{
+            height: var(--el-height);
+        }
+        .btn-extra{
+            @include breakpoint(sm) {
+                justify-content: center;
+            }
+        }
+    }
+}

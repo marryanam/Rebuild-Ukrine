@@ -1,0 +1,192 @@
+header{
+  position: fixed;
+  width: 100%;
+  left: 0;
+  top: 0;
+  z-index: 15;
+  transition: $transition;
+  transform: translateY(0);
+  &.header_bg{
+    background: rgba(255, 255, 255, 0.6);
+    backdrop-filter: blur(20px);
+    a{
+      cursor: pointer;
+    }
+  }
+  &.hide{
+    transform: translateY(-100%);
+  }
+  &.opened{
+    .menu{
+      opacity: 1;
+      pointer-events: all;
+      animation: 0.6s linear 0s forwards slide;
+      > ul{
+        li{
+          animation: 0.3s linear 0.5s forwards opacity;
+          @for $i from 1 through 15 {
+            &:nth-child(#{$i}) {
+              animation-delay: $i * 0.20s;
+            }
+          }
+        }
+      }
+      .social{
+        animation: 0.3s linear 1.2s forwards opacity;
+      }
+      .half-circle{
+        &-1{
+          animation: 0.5s linear 1.6s forwards rotate_circle_1;
+          opacity: 0;
+        }
+        &-2{
+          animation: 0.5s linear 2s forwards rotate_circle_2;
+          opacity: 0;
+        }
+      }
+    }
+  }
+
+  .container{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    @include breakpoint(lg) {
+      justify-content: flex-start;
+    }
+  }
+
+  .menu{
+    @include breakpoint(lg) {
+      position: absolute;
+      flex-direction: column;
+      opacity: 0;
+      pointer-events: none;
+      top: 100%;
+      background: $blue_1;
+      width: 100%;
+      left: 0;
+      margin: 0;
+      height: fit-content;
+      max-height: 0;
+      align-items: flex-start;
+      padding: var(--spacing_4) var(--spacing_11);
+    }
+    > ul{
+      transition: $transition;
+      display: flex;
+      align-items: center;
+      margin: 0 var(--spacing_9);
+      @include breakpoint(lg) {
+        flex-direction: column;
+        align-items: flex-start;
+        margin: 0;
+      }
+      >li{
+        position: relative;
+        transition: $transition;
+        @include breakpoint(lg) {
+          width: calc(100% - 10px);
+          opacity: 0;
+        }
+        &:hover{
+          > a{
+            color: $blue_3;
+          }
+        }
+        a{
+          font-weight: 500;
+          font-size: var(--size_8);
+          display: block;
+          color: $black;
+          padding: var(--spacing_12) var(--spacing_7);
+          @include breakpoint(lg) {
+            font-size: var(--size_3);
+            color: $white;
+          }
+        }
+        &.activeItem{
+          > a{
+            color: $blue_1;
+          }
+        }
+      }
+    }
+
+    .social{
+      display: none;
+      padding: var(--spacing_1) var(--spacing_7) var(--spacing_12);
+      opacity: 0;
+      @include breakpoint(lg) {
+        display: block;
+      }
+    }
+
+    .half-circle-1, .half-circle-2{
+      display: none;
+      @include breakpoint(lg) {
+        display: block;
+      }
+    }
+  }
+  
+  .btn{
+    @include breakpoint(lg) {
+      margin-left: auto;
+    }
+  }
+}
+
+.logo{
+  display: block;
+  max-width: 240px;
+  @include breakpoint(xxl) {
+    max-width: 180px;
+  }
+  &_desktop{
+    @include breakpoint(xl) {
+      display: none;
+    }
+  }
+  &_mobile{
+    display: none;
+    @include breakpoint(xl) {
+      display: block;
+    }
+  }
+}
+
+.burger{
+  display: none;
+  position: relative;
+  width: 50px;
+  height: 50px;
+  margin-right: var(--size_8);
+  @include breakpoint(lg) {
+    display: block;
+  }
+  svg{
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+  }
+  .svg_burger{
+    transform: translate(-50%, -50%) scale(1);
+    pointer-events: all;
+  }
+  .svg_burger_close{
+    transform: translate(-50%, -50%) scale(0);
+    pointer-events: none;
+  }
+  &.opened{
+    .svg_burger{
+      transform: translate(-50%, -50%) scale(0);
+      pointer-events: none;
+    }
+    .svg_burger_close{
+      transform: translate(-50%, -50%) scale(1);
+      pointer-events: all;
+    }
+  }
+}

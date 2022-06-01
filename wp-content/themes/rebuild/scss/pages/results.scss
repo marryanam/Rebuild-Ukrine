@@ -1,0 +1,62 @@
+.results-page{
+    background:$gradient_color_2;
+    border-bottom-left-radius: 75px;
+    margin-bottom: var(--spacing_1);
+    .container{
+        .row{
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr;
+            grid-column-gap: var(--spacing_6);
+            padding: calc(var(--spacing_1) + var(--spacing_7))  0 0;
+            @include breakpoint(lg) {
+                grid-template-columns: 1fr 1fr;
+            }
+            @include breakpoint(md) {
+                grid-template-columns: 1fr;
+                padding: var(--spacing_6)  0 0;
+            }
+            .swiper-item{
+                margin-bottom: calc(var(--spacing_1) + var(--spacing_6));
+                @include breakpoint(md) {
+                    margin-bottom: 0;
+                }
+                *{
+                    cursor:url(../../img/cursor.svg), auto !important;
+                }
+                &:nth-child(even){
+                    @include breakpoint(md) {
+                        margin-top: calc(var(--spacing_1) * 2);
+                        margin-bottom: var(--spacing_2);
+                    }
+                    &::after{
+                        height: 67%;
+                    }
+                    .img_wrap{
+                        border-radius: 100%;
+                        width: 100%;
+                        aspect-ratio: 1;
+                        margin-top: -102px;
+                        img{
+                            object-fit: cover;
+                            width: 100%;
+                            height: 100%;
+                        }
+                    }
+                }
+                &:nth-child(odd){
+                    .info{
+                        margin-top: calc(var(--spacing_10) + 2px);
+                    }
+                }
+            }
+        }
+        .btn-primary{
+            margin:0 auto var(--spacing_1);
+            justify-content: center;
+            width: fit-content;
+            @include breakpoint(md) {
+               margin: var(--spacing_1) auto;
+            }
+        }
+    }
+}

@@ -1,0 +1,61 @@
+form{
+  position: relative;
+  color: $white;
+  max-width: 670px;
+  --indent: 19px;
+  .heading{
+    color: $yellow_1;
+  }
+  .subtitle_3{
+    margin-bottom: var(--spacing_6);
+  }
+  fieldset {
+    position: relative;
+    margin-bottom: var(--spacing_6);
+    &.focused{
+      label{
+        top: -10px;
+        background: $blue_1;
+        padding: 0 var(--spacing_14);
+        font-size: var(--size_9);
+      }
+    }
+  }
+  label{
+    transition: $transition;
+    position: absolute;
+    left: var(--spacing_9);
+    top: var(--indent);
+  }
+  input, textarea{
+    width: 100%;
+    height: 60px;
+    outline: none;
+    background: none;
+    border: 1px solid $white;
+    padding: var(--indent) var(--spacing_8);
+    color: $white;
+  }
+  textarea{
+    height: 170px;
+    resize: none;
+  }
+  .btn-primary {
+    outline: none;
+    margin-left: auto;
+    border: none;
+    padding: var(--spacing_10) var(--spacing_4);
+    @include breakpoint(md) {
+      padding: var(--spacing_9) var(--spacing_4);
+    }
+    span{
+      margin: 0 var(--spacing_9);
+      @include breakpoint(md) {
+        margin: 0 var(--spacing_5);
+      }
+    }
+    @include breakpoint(md) {
+      margin: 0 auto;
+    }
+  }
+}

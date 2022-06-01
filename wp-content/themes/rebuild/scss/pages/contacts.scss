@@ -1,0 +1,162 @@
+.contacts-page{
+    .section{
+        &_1{
+            position: relative;
+            padding-bottom: var(--spacing_1);
+            border-bottom-left-radius: 160px;
+            z-index: 2;
+            background: $white;
+            @include breakpoint(lg) {
+                padding-bottom: 0;
+                border-bottom-left-radius: 0;
+            }
+            .heading {
+                margin-bottom: var(--spacing_5);
+            }
+            .block_2{
+                display: flex;
+                align-items: center;
+                width: 100%;
+                padding: var(--spacing_5) 0;
+                @include breakpoint(lg) {
+                    justify-content: center;
+                }
+                .column{
+                    display: flex;
+                    @include breakpoint(lg) {
+                        margin-top: var(--spacing_9);
+                        width: 100%;
+                    }
+                    @include breakpoint(lg) {
+                        justify-content: center;
+                        text-align: center;
+                    }
+                }
+            }
+            .group{
+                display: flex;
+                align-items: center;
+                max-width: 450px;
+                padding: var(--spacing_10) 0;
+                a{
+                @include breakpoint(xl) {
+                    word-break: break-all;
+                }
+                }
+                svg{
+                flex-shrink: 0;
+                margin-right: var(--spacing_8);
+                }
+            }
+            .social{
+                display: flex;
+                align-items: center;
+                > * {
+                    margin-right: var(--spacing_7);
+                    @include breakpoint(sm) {
+                        margin-right: var(--spacing_9);
+                    }
+                }
+            }
+        }
+
+        &_2{
+            background: $blue_1;
+            padding: var(--spacing_1) 0;
+            position: relative;
+            &::after{
+                content: '';
+                width: 100%;
+                height: 40%;
+                background: $blue_1;
+                left: 0;
+                top: -25%;
+                position: absolute;
+                z-index: -1;
+            }
+            @include breakpoint(md) {
+                padding: var(--spacing_1) 0 var(--spacing_4);
+            }
+            .container{
+                display: flex;
+                justify-content: space-between;
+                align-items: baseline;
+                @include breakpoint(md) {
+                    flex-direction: column;
+                }
+                .column{
+                    width: 50%;
+                    @include breakpoint(md) {
+                        width: 100%;
+                    }
+                }
+            }
+            .heading{
+                color: $yellow_1;
+                line-height: 1.3;
+            }
+            .subtitle_3{
+                color: $white;
+                padding: var(--spacing_7) 0;
+            }
+            .svg_branch{
+                @include breakpoint(md) {
+                    display: none;
+                }
+            }
+            br{
+                @include breakpoint(md) {
+                   display: none;
+                }
+            }
+            form{
+                @include breakpoint(md) {
+                    margin: var(--spacing_7) auto;
+                }
+                .btn{
+                    margin-left: 0;
+                    @include breakpoint(md) {
+                        margin: var(--spacing_7) auto 0;
+                    }
+                }
+            }
+        }
+    }
+    + footer{
+       > .container{
+            display: none;
+        }
+   }
+}
+
+.map{
+    --radius: 300px;
+    position: absolute;
+    right: 0;
+    top: 0;
+    overflow: hidden;
+    border-bottom-left-radius: var(--radius);
+    border-top-left-radius:var(--radius);
+    width: 45%;
+    @include breakpoint(xxl) {
+       width: 55%;
+    }
+    @include breakpoint(lg) {
+       position: relative;
+       width: 100%;
+       border-top-left-radius: var(--radius);
+       border-top-right-radius:var(--radius);
+       border-bottom-left-radius: 0;
+    }
+    iframe{
+        filter: grayscale(1);
+        width: 100%;
+        height: 750px;
+        @include breakpoint(xxl) {
+            height: 700px;
+        }
+        @include breakpoint(lg) {
+            height: 800px;
+        }
+    }
+}

@@ -1,0 +1,41 @@
+$white: #FFF;
+$black: #000;
+
+$yellow_1: #FDDC53;
+$yellow_2: #FFE98D;
+
+$blue_1: #2A46F3;
+$blue_2: #608CFF;
+$blue_3: #9BA6EE;
+$blue_4: #F6FBFF;
+$blue_5: #D2E4FE;
+
+$red_1: #B22234;
+$red_2: #EF4157;
+
+$gray_1: #F2F2F2;
+$gray_2: #BDBDBD;
+
+$gradient_color: linear-gradient(180deg, #FFFEFB 0%, #FFFBF4 45.11%, #E9F3FF 100%);
+$gradient_color_2: linear-gradient(0deg, #FFFEFB 0%, #FFFBF4 0.01%, #E9F3FF 100%);
+
+// editor colors
+$editor_color_1: #0f1854;
+$editor_color_2: #3d3f4b;
+$editor_color_3: #ffffff;
+$editor_color_4: #0019b9;
+
+// scroll colors
+$scroll_color_1: #e6e6e6;
+$scroll_color_2: #1b2247;
+
+// svg colors
+
+svg{
+    --svg_color_1: #2A46F3;
+    --svg_color_2: #9BA6EE;
+    --svg_color_3: #FDDC53;
+    --svg_color_4: #FFE98D;
+    --svg_color_5: #608CFF;
+    --svg-disabled: #BDBDBD;
+}

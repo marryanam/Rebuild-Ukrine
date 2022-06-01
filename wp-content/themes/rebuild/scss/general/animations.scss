@@ -1,0 +1,29 @@
+@keyframes slide { 
+    0% { max-height: 0px; } 
+    100% { max-height: 100vh; }  
+}
+
+@keyframes opacity { 
+    0% { opacity: 0; } 
+    100% { opacity: 1; }  
+}
+
+@keyframes translate { 
+    0% { transform: translateY(-20px); } 
+    100% { transform: translateY(0px); }  
+}
+
+@keyframes rotate_circle_1 { 
+    0% {transform: rotate(100deg); opacity: 0;} 
+    100% { transform: rotate(144deg); opacity: 1;}  
+}
+
+@keyframes rotate_circle_2 { 
+    0% {  transform: rotate(-110deg); opacity: 0;} 
+    100% {  transform: rotate(-155deg); opacity: 1;}  
+}
+
+@keyframes scroll {
+    0% {transform: translate(0, 0);}
+    100% { transform: translate(-100%, 0)}
+}

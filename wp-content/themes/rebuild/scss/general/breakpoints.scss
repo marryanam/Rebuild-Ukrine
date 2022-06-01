@@ -1,0 +1,42 @@
+$break-xxl: 1650px;
+$break-xxll: 1440px;
+$break-xl: 1200px;
+$break-lg: 992px;
+$break-md: 768px;
+$break-sm: 576px;
+$break-xs: 375px;
+
+$base_spacing: 15px;
+
+html, body{
+  --container: 1340px;
+}
+
+.container {
+  max-width: var(--container);
+  margin: 0 auto;
+  width: 100%;
+  padding: $base_spacing - 5 $base_spacing;
+  box-sizing: border-box;
+  @include breakpoint(xxl) {
+    --container: 1250px;
+  }
+  @include breakpoint(xxll) {
+    --container: 1100px;
+  }
+  @include breakpoint(xl) {
+    --container: 990px;
+  }
+  @include breakpoint(lg) {
+    --container: 800px;
+  }
+  @include breakpoint(md) {
+    --container: 768px;
+  }
+  @include breakpoint(sm) {
+    --container: 568px;
+  }
+  @include breakpoint(xs) {
+    --container: 100%;
+  }
+}

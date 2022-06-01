@@ -1,0 +1,74 @@
+.svg_icon{
+    &.btn_svg_1{
+        width: 48px;
+        height: 29px;
+    }
+    &.btn_svg_2{
+        width: 23px;
+        height: 26px;
+    }
+    &.svg_burger{
+        width: 26px;
+        height: 19px;
+    }
+    &.svg_burger_close{
+        width: 21px;
+        height: 21px;
+    }
+    &.svg_social{
+        width: 50px;
+        height: 50px;  
+    }
+    &.svg_trident{
+        width: 43px;
+        height: 74px; 
+        @include breakpoint(lg) {
+            width: 30px;
+            height: 40px;
+        }
+    }
+    &.svg_phone{
+        width: 31px;
+        height: 37px; 
+    }
+    &.svg_email{
+        width: 33px;
+        height: 26px; 
+    }
+    &.svg_adress{
+        width: 33px;
+        height: 33px; 
+    }
+    &.svg_branch{
+        width: 103px;
+        height: 201px; 
+        @include breakpoint(sm) {
+            width: 85px;
+            height: 170px;
+        } 
+    }
+    &.svg_flower{
+        width: 48px;
+        height: 44px;  
+    }
+    &.svg_branch_4{
+        width: 201px;
+        height: 102px;
+    }
+    &.svg_branch_3{
+        width: 154px;
+        height: 376px;
+    }
+    &.svg_faq{
+        width: 37px;
+        height: 26px;  
+    }
+    &.svg_arrow{
+        width: 14px;
+        height: 9px;  
+    }
+    &.svg_bird{
+        width: 71px;
+        height: 77px;  
+    }
+}

@@ -55,7 +55,7 @@
         </a>
     </section>
 
-    <section class="section_2 scroll-y">
+    <section class="section_2 half-circle-list scroll-y">
         <div class="container">
             <div class="column">
                 <div class="half-circle half-circle-1 blue"></div>
@@ -109,7 +109,7 @@
         </div>
     </section>
 
-    <section class="section_4 scroll-y">
+    <section class="section_4 scroll-y tickerLine">
         <div class="ticker">
             <p class="heading">are you a volunteer?</p>
         </div>
@@ -118,7 +118,7 @@
         </div>
     </section>
 
-    <section class="section_5 linear_bg scroll-y">
+    <section class="section_5 linear_bg scroll-y col_section">
         <div class="container">
             <div class="column">
                 <h3 class="subtitle_2">What to do</h3>
