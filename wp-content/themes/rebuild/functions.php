@@ -49,7 +49,7 @@ function rebuild_setup() {
 	// This theme uses wp_nav_menu() in one location.
 	register_nav_menus(
 		array(
-			'menu-1' => esc_html__( 'Primary', 'rebuild' ),
+			'menu-primary' => esc_html__( 'Primary', 'rebuild' ),
 		)
 	);
 
@@ -138,10 +138,14 @@ add_action( 'widgets_init', 'rebuild_widgets_init' );
  * Enqueue scripts and styles.
  */
 function rebuild_scripts() {
-	wp_enqueue_style( 'rebuild-style', get_stylesheet_uri(), array(), _S_VERSION );
-	wp_style_add_data( 'rebuild-style', 'rtl', 'replace' );
+	wp_enqueue_style( 'style', get_stylesheet_uri(), array(), _S_VERSION );
+	wp_enqueue_style( 'main-style', get_template_directory_uri(). '/css/main.css', array(), _S_VERSION );
+	wp_enqueue_style( 'fontawesome', 'https://pro.fontawesome.com/releases/v5.10.0/css/all.css', array(), null );
+	wp_enqueue_style( 'montserrat-font', 'https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600&display=swap', array(), null );
 
-	wp_enqueue_script( 'rebuild-navigation', get_template_directory_uri() . '/js/navigation.js', array(), _S_VERSION, true );
+	wp_enqueue_script( 'jquery', 'https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js', array(), null, true );
+	wp_enqueue_script( 'google-maps', 'https://maps.googleapis.com/maps/api/js?key=AIzaSyBHv7iI3_z0gzKy83nXBgO0Dn9zDVGQs6A', array(), null, true );
+    wp_enqueue_script( 'main-script', get_template_directory_uri() . '/js/main.js', array(), _S_VERSION, true );
 
 	if ( is_singular() && comments_open() && get_option( 'thread_comments' ) ) {
 		wp_enqueue_script( 'comment-reply' );
@@ -163,6 +167,11 @@ require get_template_directory() . '/inc/template-tags.php';
  * Functions which enhance the theme by hooking into WordPress.
  */
 require get_template_directory() . '/inc/template-functions.php';
+
+/**
+ *  Custom post types & taxonomies for this theme
+ */
+require get_template_directory() . '/inc/template-post-types.php';
 
 /**
  * Customizer additions.

@@ -35,3 +35,4 @@ function rebuild_pingback_header() {
 	}
 }
 add_action( 'wp_head', 'rebuild_pingback_header' );
+
