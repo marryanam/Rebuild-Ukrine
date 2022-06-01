@@ -22,38 +22,55 @@
 
 <body <?php body_class(); ?>>
 <?php wp_body_open(); ?>
-<div id="page" class="site">
-	<a class="skip-link screen-reader-text" href="#primary"><?php esc_html_e( 'Skip to content', 'rebuild' ); ?></a>
 
-	<header id="masthead" class="site-header">
-		<div class="site-branding">
-			<?php
-			the_custom_logo();
-			if ( is_front_page() && is_home() ) :
-				?>
-				<h1 class="site-title"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a></h1>
-				<?php
-			else :
-				?>
-				<p class="site-title"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a></p>
-				<?php
-			endif;
-			$rebuild_description = get_bloginfo( 'description', 'display' );
-			if ( $rebuild_description || is_customize_preview() ) :
-				?>
-				<p class="site-description"><?php echo $rebuild_description; // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped ?></p>
-			<?php endif; ?>
-		</div><!-- .site-branding -->
+<header>
+    <div class="container">
 
-		<nav id="site-navigation" class="main-navigation">
-			<button class="menu-toggle" aria-controls="primary-menu" aria-expanded="false"><?php esc_html_e( 'Primary Menu', 'rebuild' ); ?></button>
-			<?php
-			wp_nav_menu(
-				array(
-					'theme_location' => 'menu-1',
-					'menu_id'        => 'primary-menu',
-				)
-			);
-			?>
-		</nav><!-- #site-navigation -->
-	</header><!-- #masthead -->
+        <div class="burger">
+            <svg class="svg_icon svg_burger">
+                <use xlink:href="<?php echo get_template_directory_uri(); ?>/img/svg_map.svg#svg_burger" />
+            </svg>
+            <svg class="svg_icon svg_burger_close">
+                <use xlink:href="<?php echo get_template_directory_uri(); ?>/img/svg_map.svg#svg_burger_close" />
+            </svg>
+        </div>
+
+        <a href="<?php echo home_url(); ?>" class="logo">
+            <img src="<?php echo get_template_directory_uri(); ?>/img/logo.svg" alt="#"  title="#" class="logo_desktop"/>
+            <img src="<?php echo get_template_directory_uri(); ?>/img/logo_2.svg" alt="#"  title="#" class="logo_mobile"/>
+        </a>
+
+        <div class="menu">
+            <?php wp_nav_menu([
+                'theme_location'  => 'menu-primary',
+                'menu_id'         => 'primary-menu',
+                'container'       => false,
+                'menu_class'      => ''
+            ]) ?>
+
+            <div class='half-circle-1 red'></div>
+            <div class='half-circle-2 yellow'></div>
+
+            <div class="social">
+                <a href="#">
+                    <svg class="svg_icon svg_social">
+                        <use xlink:href="<?php echo get_template_directory_uri(); ?>/img/svg_map.svg#svg_fb" />
+                    </svg>
+                </a>
+                <a href="#">
+                    <svg class="svg_icon svg_social">
+                        <use xlink:href="<?php echo get_template_directory_uri(); ?>/img/svg_map.svg#svg_twitter" />
+                    </svg>
+                </a>
+            </div>
+        </div>
+
+        <div class="btn-primary">
+            <svg class="svg_icon btn_svg_1">
+                <use xlink:href="<?php echo get_template_directory_uri(); ?>/img/svg_map.svg#btn_svg_1" />
+            </svg>
+            <span>Donate</span>
+        </div>
+
+    </div>
+</header>
