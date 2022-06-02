@@ -1,0 +1,38 @@
+//libs
+@import 'libs/fontawesome';
+@import 'libs/fancy-box';
+@import 'libs/nice-select';
+@import 'libs/swiper';
+
+//general styles
+@import 'general/reset';
+@import 'general/colors';
+@import 'general/mixin';
+@import 'general/breakpoints';
+@import 'general/svg_sizes';
+@import 'general/custom_fonts';
+@import 'general/fonts';
+@import 'general/spacing';
+@import 'general/global';
+@import 'general/editor';
+@import 'general/animations';
+
+//component styles
+@import 'components/buttons';
+@import 'components/header';
+@import 'components/footer';
+@import 'components/forms';
+@import 'components/accordion';
+@import 'components/slider_item';
+@import 'components/popup';
+@import 'components/template_sections';
+
+//page styles
+@import 'pages/front-page';
+@import 'pages/contacts';
+@import 'pages/results';
+@import 'pages/partners';
+@import 'pages/about-us';
+@import 'pages/results_inner';
+@import 'pages/page-404';
+@import 'pages/requests';

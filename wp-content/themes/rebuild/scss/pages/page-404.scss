@@ -1,0 +1,29 @@
+.page-404{
+    margin-bottom: var(--spacing_1);
+    @include breakpoint(lg) {
+        margin-bottom: 0;
+    }
+    .decoration_bg {
+        @include breakpoint(md) {
+        min-height: 100vh;
+        }
+    }
+   .container{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        padding: var(--spacing_1) 0;
+        .heading{
+            color: $yellow_1;
+        }
+        .subtitle_3{
+            color: $white;
+            padding: var(--spacing_10) 0 var(--spacing_6);
+        }
+   }
+   + footer{
+       display: none;
+   }
+}

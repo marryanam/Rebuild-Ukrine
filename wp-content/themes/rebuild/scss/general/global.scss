@@ -1,0 +1,65 @@
+$transition: all 0.3s ease;
+$transition_2: all 0.6s ease;
+$translateY: -40px;
+$translateY-2: -20px;
+
+* {
+  box-sizing: border-box;
+  outline: none !important;
+  cursor: none;
+  margin: 0;
+  padding: 0;
+}
+
+html, body {
+  margin: 0;
+  padding: 0;
+  font-family: $font_family_1;
+  font-size: var(--base_size);
+  line-height: 1.5;
+  overflow-x: hidden;
+}
+a, svg{
+  text-decoration: none;
+  transition: $transition;
+}
+a{
+  cursor: none;
+  color: $black;
+  &:hover{
+    color: $blue_3;
+  }
+}
+p, span, a, svg{
+  position: relative;
+  z-index: 2;
+}
+img{
+  max-width: 100%;
+  height: auto;
+}
+main{
+  padding-top: calc(var(--spacing_1) + var(--spacing_5));
+}
+
+::-webkit-scrollbar {
+  width: 4px;
+  height: 10px;
+  cursor: pointer;
+}
+
+::-webkit-scrollbar-track {
+  background-color: $scroll_color_1;
+  cursor: pointer;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: $scroll_color_2;
+  cursor: pointer;
+}
+
+::placeholder{
+  font-size: var(--base_size);
+  font-family: $font_family_1;
+  color: $white;
+}

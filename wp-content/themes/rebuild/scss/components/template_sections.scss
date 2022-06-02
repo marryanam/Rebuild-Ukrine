@@ -1,0 +1,228 @@
+// general sections
+
+.tickerLine{
+    margin: var(--spacing_2) auto;
+    &.enter{
+        .ticker{
+            &:first-child{
+                p{
+                    animation: scroll 7s infinite linear;
+                }
+            }
+            &:last-child{
+                p{
+                    animation: scroll 9s infinite linear reverse;
+                }
+            }
+        }
+    }
+    .ticker{
+        display: block;
+        width: 100%;
+        white-space: nowrap;
+        overflow: hidden;
+        &:last-child{
+            p{
+                color: $blue_1;
+            }
+        }
+        p{
+            display: inline-block;
+            padding-left: 100%;
+        }
+    }
+}
+
+.half-circle-list{
+    padding-bottom: var(--spacing_2);
+    &.enter{
+        .container{
+            .column{
+                opacity: 1;
+                transform: translateY(0);
+                @for $i from 1 through 3 {
+                    &:nth-child(#{$i}) {
+                        transition-delay: $i * 0.40s;
+                    }
+                }
+            }
+        }
+    }
+    .container{
+        display: flex;
+        justify-content: space-between;
+        @include breakpoint(md) {
+            flex-direction: column;
+        }
+        .column{
+            transition: $transition_2;
+            max-width: 260px;
+            opacity: 0;
+            transform: translateY($translateY);
+            @include breakpoint(md) {
+                max-width: 100%;
+            }
+            &:not(:last-child){
+                margin-right: var(--spacing_1);
+                @include breakpoint(lg) {
+                    margin-right: var(--spacing_4);
+                }
+                @include breakpoint(md) {
+                    margin-right: 0;
+                    margin-bottom: var(--spacing_4);
+                }
+            }
+            .subtitle_2{
+                padding-bottom: var(--spacing_10);
+            }
+            .half-circle{
+                position: relative;
+                margin-bottom: var(--spacing_9);
+                transition: $transition_2;
+                &-1{
+                    right: 0;
+                    transform: rotate(159deg);
+                    bottom: 0;
+                    margin-bottom: 20px;
+                }
+                &-2{
+                    right: 15%;
+                    transform: rotate(0deg);
+                    bottom: 0;
+                    @include breakpoint(md) {
+                        right: 0;
+                    }
+                }
+                &-3{
+                    transform: rotate(-150deg);
+                    right: 20%;
+                    @include breakpoint(md) {
+                        right: 0;
+                    }
+                }
+            }
+            &:hover{
+                .half-circle{
+                    &-1{
+                        transform: rotate(179deg);
+                    }
+                    &-2{
+                        transform: rotate(-20deg);
+                    }
+                    &-3{
+                        transform: rotate(-170deg);
+                    }
+                }  
+            }
+        }
+    }
+}
+
+.yellow_section{
+    background: $yellow_1;
+    position: relative;
+    &::after{
+        content: '';
+        position: absolute;
+        width: 100%;
+        height: 60%;
+        top: -57%;
+        left: 0;
+        background: $yellow_1;
+    }
+    .container{
+        display: flex;
+        align-items: center;
+        padding-top: var(--spacing_6);
+        padding-bottom: var(--spacing_6);
+        @include breakpoint(md) {
+            flex-direction: column;
+            justify-content: center;
+            text-align: center;
+        }
+        .btn-secondary{
+            margin-left: auto;
+            flex-shrink: 0;
+            @include breakpoint(md) {
+                margin: var(--spacing_6) auto 0;
+            }
+        }
+        .title{
+            max-width: 400px;
+            margin-left: var(--spacing_6);
+        }
+    }
+}
+
+.insert_section{
+    display: flex;
+    padding: var(--spacing_6) 0;
+    flex-wrap: wrap;
+    @include breakpoint(md) {
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+    > *{
+        &:not(:last-child){
+            padding-right: var(--spacing_2);
+             @include breakpoint(md) {
+                padding-right: 0;
+                text-align: center;
+            }
+        }
+    }
+    .heading{
+        color: $blue_1;
+        font-size: 84px;
+    }
+    .subtitle_1{
+        font-size: 28px;
+        @include breakpoint(md) {
+            text-align: center;
+        }
+    }
+}
+
+.col_section{
+    padding-bottom: var(--spacing_1);
+    position: relative;
+    z-index: 2;
+    .container{
+        display: flex;
+        justify-content: space-around;
+        @include breakpoint(md) {
+            flex-direction: column;
+        }
+        .column{
+            width: 50%;
+            max-width: 470px;
+            @include breakpoint(md) {
+                width: 100%;
+                max-width: 100%;
+            }
+            &:first-child{
+                margin-right: var(--spacing_6);
+                @include breakpoint(md) {
+                    margin-bottom:  var(--spacing_6);
+                }
+                p{
+                    margin-bottom: var(--spacing_9);
+                }
+                .subtitle_2{
+                    margin-bottom: var(--spacing_8);
+                }
+            }
+            &:last-child{
+                p{
+                    margin-bottom: var(--spacing_6);
+                }
+            }
+            .btn-secondary{
+                @include breakpoint(md) {
+                    margin: 0 auto;
+                }
+            }
+        }
+    }
+}

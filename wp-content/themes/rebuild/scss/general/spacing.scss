@@ -1,0 +1,49 @@
+body{
+    --spacing_1: 120px;
+    --spacing_2: 100px;
+    --spacing_3: 80px;
+    --spacing_4: 60px;
+    --spacing_5: 48px;
+    --spacing_6: 42px;
+    --spacing_7: 32px;
+    --spacing_8: 24px;
+    --spacing_9: 20px;
+    --spacing_10: 16px;
+    --spacing_11: 12px;
+    --spacing_12: 10px;
+    --spacing_13: 8px;
+    --spacing_14: 4px;
+
+    @include breakpoint(xxl) {
+        --spacing_1: 100px;
+        --spacing_2: 80px;
+        --spacing_3: 60px;
+        --spacing_4: 48px;
+        --spacing_5: 42px;
+        --spacing_6: 32px;
+        --spacing_7: 28px;
+        --spacing_8: 24px;
+        --spacing_9: 20px;
+        --spacing_10: 16px;
+        --spacing_11: 12px;
+        --spacing_12: 10px;
+        --spacing_13: 8px;
+        --spacing_14: 4px;
+    }
+    @include breakpoint(sm) {
+        --spacing_1: 80px;
+        --spacing_2: 60px;
+        --spacing_3: 48px;
+        --spacing_4: 42px;
+        --spacing_5: 32px;
+        --spacing_6: 28px;
+        --spacing_7: 24px;
+        --spacing_8: 20px;
+        --spacing_9: 16px;
+        --spacing_10: 12px;
+        --spacing_11: 10px;
+        --spacing_12: 8px;
+        --spacing_13: 4px;
+        --spacing_14: 4px;
+    }
+}

@@ -1,0 +1,231 @@
+.about_page{
+    .section{
+        &_1{
+            min-height: 50vh;
+            position: relative;
+            padding: 0 0 var(--spacing_1);
+            .heading{
+                text-align: center;
+                padding: var(--spacing_6) 0;
+            }
+            .container{
+                position: relative;
+                > .half-circle{
+                    &-1{
+                        left: 5%;
+                        right: unset;
+                        transform: rotate(215deg);
+                        bottom: unset;
+                        top: 0;
+                    }
+                    &-2{
+                        right: 40%;
+                        transform: rotate(1deg);
+                        bottom: 32%;
+                        @include breakpoint(xl) {
+                           right: 45%;
+                           bottom: 25%;
+                        }
+                        @include breakpoint(md) {
+                            display: none;
+                        }
+                    }
+                    &-3{
+                        right: -2%;
+                        transform: rotate(-35deg);
+                        bottom: 32%;
+                    }
+                    @include breakpoint(md) {
+                         --size: 40px;
+                    }
+                }
+                >img{
+                    transition: 1s;
+                    opacity: 0;
+                    transform: scale(0.8);
+                    max-width: 250px;
+                    @include breakpoint(lg) {
+                        max-width: 150px;
+                    }
+                    @include breakpoint(md) {
+                         max-width: 110px;
+                    }
+                    @for $i from 1 through 3 {
+                        &:nth-child(#{$i}) {
+                            transition-delay: $i * 0.40s;
+                        }
+                    }
+                    &.img_1{
+                        position: relative;
+                        left: 15vw;
+                        opacity: 1;
+                    }
+                    &.img_2{
+                        position: absolute;
+                        left: 10%;
+                        bottom: 0;
+                    }
+                    &.img_3{
+                        position: absolute;
+                        right: 0;
+                        top: 10%;
+                    }
+                    &.img_4{
+                        position: relative;
+                        margin-left: auto;
+                        display: block;
+                        margin-right: 15%;
+                        opacity: 1;
+                    }
+                }
+            }
+            &.enter{
+                .container{
+                    img{
+                        opacity: 1;
+                        transform: scale(1);
+                    }
+                }
+            }
+        }
+
+        &_2{
+            padding-bottom: 0;
+        }
+
+        &_3{
+            background: $white;
+            z-index: 2;
+            position: relative;
+            border-bottom-right-radius: 100px;
+        }
+
+        &_5{
+            background: $white;
+            position: relative;
+            z-index: 2;
+            padding-bottom: var(--spacing_2);
+            border-bottom-right-radius: 100px;
+            &:after{
+                transition: 2s ease;
+                content: '';
+                background: $blue_1;
+                width: 0;
+                height: 400px;
+                position: absolute;
+                right: 0;
+                top: 38%;
+                z-index: -1;
+                border-bottom-left-radius: 100px;
+                border-top-left-radius: 100px;
+                transition-delay: 1s;
+                @include breakpoint(xxl) {
+                   top: 35%;
+                }
+                 @include breakpoint(xxll) {
+                   top: 30%;
+                }
+                @include breakpoint(xl) {
+                   top: 25%;
+                }
+                @include breakpoint(lg) {
+                    height: 300px;
+                }
+                @include breakpoint(md) {
+                   top: 20%;
+                   display: none;
+                }
+            }
+            &.enter{
+                &:after{
+                    width: 50%;
+                }
+            }
+           .container{
+                > img{
+                    width: 100%;
+                }
+                .title{
+                    padding: var(--spacing_6) 0;
+                }
+                .row{
+                    columns: 2;
+                    column-gap: var(--spacing_10);
+                    @include breakpoint(md) {
+                        columns: 1;
+                    }
+                    p{
+                        padding-bottom: var(--spacing_10);
+                    }
+                }
+           }
+        }
+
+        &_7{
+            background: $blue_1;
+            padding: var(--spacing_2) 0 var(--spacing_4);
+            margin-bottom: var(--spacing_2);
+            .btn-primary{
+                justify-content: center;
+                width: fit-content;
+                margin: var(--spacing_6) auto;
+            }
+            .heading{
+                color: $yellow_1;
+            }
+            .row{
+                display: grid;
+                grid-template-columns: repeat(4, 1fr);
+                padding: var(--spacing_6) 0 0;
+                grid-column-gap: var(--spacing_6);
+                @include breakpoint(lg) {
+                    grid-template-columns: repeat(3, 1fr);
+                }
+                @include breakpoint(md) {
+                    grid-template-columns: repeat(2, 1fr);
+                }
+                .item{
+                    color: $white;
+                    margin-bottom: var(--spacing_4);
+                    .img_wrap{
+                        background: $yellow_1;
+                        margin-bottom: var(--spacing_10);
+                        min-height: 300px;
+                        position: relative;
+                        @include breakpoint(xxll) {
+                            min-height: 250px;
+                        }
+                        @include breakpoint(md) {
+                            min-height: 300px;
+                        }
+                        @include breakpoint(sm) {
+                            min-height: 200px;
+                        }
+                        img{
+                            width: 100%;
+                            height: 100%;
+                            object-fit: cover;
+                            position: absolute;
+                        }
+                    }
+                    &:nth-child(even){
+                        .img_wrap{
+                            img{
+                                border-bottom-left-radius: 150px;
+                                border-bottom-right-radius: 150px;
+                            }
+                        }
+                    }
+                    &:nth-child(odd){
+                        .img_wrap{
+                            img{
+                                border-top-left-radius: 150px;
+                                border-top-right-radius: 150px;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
