@@ -15,13 +15,13 @@
             <div class='half-circle-2 blue'></div>
             <div class='half-circle-3 red'></div>
 
-            <img src="img/image_15.png" alt="#" title="#" class="img_1">
+            <img src="<?php echo get_template_directory_uri(); ?>/img/image_15.png" alt="#" title="#" class="img_1">
 
             <h1 class="heading">Who we are</h1>
 
-            <img src="img/image_13.png" alt="#" title="#" class="img_2">
-            <img src="img/image_12.png" alt="#" title="#" class="img_3">
-            <img src="img/image_14.png" alt="#" title="#" class="img_4">
+            <img src="<?php echo get_template_directory_uri(); ?>/img/image_13.png" alt="#" title="#" class="img_2">
+            <img src="<?php echo get_template_directory_uri(); ?>/img/image_12.png" alt="#" title="#" class="img_3">
+            <img src="<?php echo get_template_directory_uri(); ?>/img/image_14.png" alt="#" title="#" class="img_4">
         </div>
     </section>
 
@@ -36,11 +36,11 @@
                 <p class="title">If you want to join our team, contact us. Let's rebuild the country together!</p>
                 <div class="btn-secondary">
                     <svg class="svg_icon btn_svg_2"> 
-                        <use xlink:href="img/svg_map.svg#btn_svg_2" />
+                        <use xlink:href="<?php echo get_template_directory_uri(); ?>/img/svg_map.svg#btn_svg_2" />
                     </svg>
                     <span>get in touch</span>
                     <svg class="svg_icon btn_svg_2"> 
-                        <use xlink:href="img/svg_map.svg#btn_svg_3" />
+                        <use xlink:href="<?php echo get_template_directory_uri(); ?>/img/svg_map.svg#btn_svg_3" />
                     </svg>
                 </div>
             </div>
@@ -84,7 +84,7 @@
 
     <section class="section_5 scroll-y">
         <div class="container">
-            <img src="img/image_5.png" alt="#" title="#">
+            <img src="<?php echo get_template_directory_uri(); ?>/img/image_5.png" alt="#" title="#">
             <p class="title">HOW WE DO THIS</p>
             <div class="row">
                 <p>We created this project to provide urgent help and support in face of an extreme and unforeseen situation in Ukraine. We created this project to provide urgent help and support in face of an extreme and unforeseen situation in Ukraine.We created this project to provide urgent help and support in face of an extreme and unforeseen situation in Ukraine. We created this project to provide urgent help and support in face of an extreme and unforeseen situation in Ukraine.</p>
@@ -97,16 +97,16 @@
     <section class="section_6 scroll-y yellow_section">
         <div class="container">
             <svg class="svg_icon svg_branch_4"> 
-                <use xlink:href="img/svg_map.svg#svg_branch_4" />
+                <use xlink:href="<?php echo get_template_directory_uri(); ?>/img/svg_map.svg#svg_branch_4" />
             </svg>
             <p class="title">Let's Rebuild Ukraine Together </p>
             <a href="#" class="btn-secondary">
                 <svg class="svg_icon btn_svg_2"> 
-                    <use xlink:href="img/svg_map.svg#btn_svg_2" />
+                    <use xlink:href="<?php echo get_template_directory_uri(); ?>/img/svg_map.svg#btn_svg_2" />
                 </svg>
                 <span>Support</span>
                 <svg class="svg_icon btn_svg_2"> 
-                    <use xlink:href="img/svg_map.svg#btn_svg_3" />
+                    <use xlink:href="<?php echo get_template_directory_uri(); ?>/img/svg_map.svg#btn_svg_3" />
                 </svg>
             </a>
         </div>
@@ -118,42 +118,42 @@
             <div class="row">
                 <div class="item">
                     <div class="img_wrap">
-                        <img src="img/image_18.png" alt="#" title="#">
+                        <img src="<?php echo get_template_directory_uri(); ?>/img/image_18.png" alt="#" title="#">
                     </div>
                     <p class="subtitle_3">Tom Miler</p>
                     <p>Volunteer</p>
                 </div>
                 <div class="item">
                     <div class="img_wrap">
-                        <img src="img/image_17.png" alt="#" title="#">
+                        <img src="<?php echo get_template_directory_uri(); ?>/img/image_17.png" alt="#" title="#">
                     </div>
                     <p class="subtitle_3">Tom Miler</p>
                     <p>Volunteer</p>
                 </div>
                <div class="item">
                     <div class="img_wrap">
-                        <img src="img/image_18.png" alt="#" title="#">
+                        <img src="<?php echo get_template_directory_uri(); ?>/img/image_18.png" alt="#" title="#">
                     </div>
                     <p class="subtitle_3">Tom Miler</p>
                     <p>Volunteer</p>
                 </div>
                 <div class="item">
                     <div class="img_wrap">
-                        <img src="img/image_17.png" alt="#" title="#">
+                        <img src="<?php echo get_template_directory_uri(); ?>/img/image_17.png" alt="#" title="#">
                     </div>
                     <p class="subtitle_3">Tom Miler</p>
                     <p>Volunteer</p>
                 </div>
                 <div class="item">
                     <div class="img_wrap">
-                        <img src="img/image_18.png" alt="#" title="#">
+                        <img src="<?php echo get_template_directory_uri(); ?>/img/image_18.png" alt="#" title="#">
                     </div>
                     <p class="subtitle_3">Tom Miler</p>
                     <p>Volunteer</p>
                 </div>
                 <div class="item">
                     <div class="img_wrap">
-                        <img src="img/image_17.png" alt="#" title="#">
+                        <img src="<?php echo get_template_directory_uri(); ?>/img/image_17.png" alt="#" title="#">
                     </div>
                     <p class="subtitle_3">Tom Miler</p>
                     <p>Volunteer</p>

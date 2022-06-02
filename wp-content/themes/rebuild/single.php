@@ -1,40 +1,27 @@
 <?php
 /**
- * The template for displaying all single posts
+ * The template for displaying all posts
  *
  * @link https://developer.wordpress.org/themes/basics/template-hierarchy/#single-post
  *
  * @package rebuild
  */
-
-get_header();
 ?>
 
-	<main id="primary" class="site-main">
+<?php get_header(); ?>
 
-		<?php
-		while ( have_posts() ) :
-			the_post();
+<main class="page-wrapper results_inner_page">
 
-			get_template_part( 'template-parts/content', get_post_type() );
+    <?php while ( have_posts() ) : the_post();
 
-			the_post_navigation(
-				array(
-					'prev_text' => '<span class="nav-subtitle">' . esc_html__( 'Previous:', 'rebuild' ) . '</span> <span class="nav-title">%title</span>',
-					'next_text' => '<span class="nav-subtitle">' . esc_html__( 'Next:', 'rebuild' ) . '</span> <span class="nav-title">%title</span>',
-				)
-			);
+        get_template_part('template-parts/section', 'content');
 
-			// If comments are open or we have at least one comment, load up the comment template.
-			if ( comments_open() || get_comments_number() ) :
-				comments_template();
-			endif;
+    endwhile; ?>
 
-		endwhile; // End of the loop.
-		?>
+    <?php get_template_part('template-parts/section', 'cta'); ?>
 
-	</main><!-- #main -->
+    <?php get_template_part('template-parts/section', 'other-results'); ?>
 
-<?php
-get_sidebar();
-get_footer();
+</main>
+
+<?php get_footer(); ?>
