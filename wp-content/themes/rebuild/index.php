@@ -11,47 +11,32 @@
  *
  * @package rebuild
  */
-
-get_header();
 ?>
 
-	<main id="primary" class="site-main">
+<?php get_header(); ?>
 
-		<?php
-		if ( have_posts() ) :
+<main class="page-wrapper">
 
-			if ( is_home() && ! is_front_page() ) :
-				?>
-				<header>
-					<h1 class="page-title screen-reader-text"><?php single_post_title(); ?></h1>
-				</header>
-				<?php
-			endif;
+    <?php while ( have_posts() ) : the_post(); ?>
 
-			/* Start the Loop */
-			while ( have_posts() ) :
-				the_post();
+        <section class="section_1 scroll-y">
+            <div class="container">
+                <?php rebuild_post_thumbnail(); ?>
 
-				/*
-				 * Include the Post-Type-specific template for the content.
-				 * If you want to override this in a child theme, then include a file
-				 * called content-___.php (where ___ is the Post Type name) and that will be used instead.
-				 */
-				get_template_part( 'template-parts/content', get_post_type() );
+                <div class="row">
+                    <span><?php rebuild_posted_on(); ?></span>
+                </div>
 
-			endwhile;
+                <p class="heading"><?php the_title(); ?></p>
 
-			the_posts_navigation();
+                <div class="content editor">
+                    <?php the_content(); ?>
+                </div>
+            </div>
+        </section>
 
-		else :
+    <?php endwhile; ?>
 
-			get_template_part( 'template-parts/content', 'none' );
+</main>
 
-		endif;
-		?>
-
-	</main><!-- #main -->
-
-<?php
-get_sidebar();
-get_footer();
+<?php get_footer();

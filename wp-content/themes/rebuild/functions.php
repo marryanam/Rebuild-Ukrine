@@ -154,24 +154,24 @@ function rebuild_scripts() {
 add_action( 'wp_enqueue_scripts', 'rebuild_scripts' );
 
 /**
- * Implement the Custom Header feature.
- */
-require get_template_directory() . '/inc/custom-header.php';
-
-/**
- * Custom template tags for this theme.
- */
-require get_template_directory() . '/inc/template-tags.php';
-
-/**
  * Functions which enhance the theme by hooking into WordPress.
  */
 require get_template_directory() . '/inc/template-functions.php';
 
 /**
+ * Custom callback functions
+ */
+require get_template_directory() . '/inc/callback-functions.php';
+
+/**
  *  Custom post types & taxonomies for this theme
  */
 require get_template_directory() . '/inc/template-post-types.php';
+
+/**
+ *  Custom template tags for this theme
+ */
+require get_template_directory() . '/inc/template-post-tags.php';
 
 /**
  * Customizer additions.
