@@ -32,7 +32,7 @@ function rebuild_post_thumbnail() {
 function rebuild_support_button() {
     ?>
 
-    <div class="btn-secondary">
+    <div class="btn btn-secondary">
         <svg class="svg_icon btn_svg_2">
             <use xlink:href="<?php echo get_template_directory_uri();  ?>/img/svg_map.svg#btn_svg_2" />
         </svg>

@@ -2,6 +2,22 @@
     background:$blue_4;
     border-bottom-left-radius: 75px;
     margin-bottom: var(--spacing_1);
+     section{
+        position: relative;
+        .scrolling-svg{
+            right: 0;
+            top: calc(var(--spacing_2) * -1);
+            @include breakpoint(sm) {
+                 right: calc(var(--spacing_2) * -1);
+            }
+            &-2{
+                right: 0;
+                bottom: var(--spacing_4);
+                top: unset;
+                width: 100%;
+            }
+        }
+    }
     .container{
         .row{
             display: grid;

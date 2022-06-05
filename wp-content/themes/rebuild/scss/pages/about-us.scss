@@ -1,4 +1,25 @@
 .about_page{
+    .scrolling-svg{
+        &-1{
+            z-index: -1;
+            top: 40%;
+            left: 0;
+            @include breakpoint(lg) {
+                display: none;
+            }
+        }
+        &-3{
+            z-index: -1;
+            top: 40%;
+            right: 0;
+            @include breakpoint(lg) {
+                display: none;
+            }
+        }
+        &-2{
+            width: 100%;
+        }
+    }
     .section{
         &_1{
             min-height: 50vh;
