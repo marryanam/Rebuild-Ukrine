@@ -74,8 +74,19 @@
                         <svg class="svg_icon btn_svg_1">
                             <use xlink:href="<?php echo get_template_directory_uri(); ?>/img/svg_map.svg#btn_svg_1" />
                         </svg>
-                        <span>Donate</span>
-                    </div>
+
+                    </a>
+                    <a href="#">
+                        <svg class="svg_icon svg_social">
+                            <use xlink:href="<?php echo get_template_directory_uri(); ?>/img/svg_map.svg#svg_twitter" />
+                        </svg>
+                    </a>
+                </div>
+                <div class="btn btn-primary">
+                    <svg class="svg_icon btn_svg_1">
+                        <use xlink:href="<?php echo get_template_directory_uri(); ?>/img/svg_map.svg#btn_svg_1" />
+                    </svg>
+                    <span>Donate</span>
                 </div>
             </div>
         </div>

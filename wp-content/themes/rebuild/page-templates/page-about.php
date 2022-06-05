@@ -14,11 +14,15 @@
             <div class='half-circle-1 yellow'></div>
             <div class='half-circle-2 blue'></div>
             <div class='half-circle-3 red'></div>
-
+            <svg class="scroll-y scrolling-svg scrolling-svg-1" width="358" height="115" viewBox="0 0 358 115" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path class="scrolling-path" d="M-3 1C-3 1 74 10.5 111 80C123.139 102.802 112.5 116.667 107 113C98 107 143 46 237 67C331 88 349 59 357 49" stroke="#9BA6EE"/>
+            </svg>
             <img src="<?php echo get_template_directory_uri(); ?>/img/image_15.png" alt="#" title="#" class="img_1">
 
             <h1 class="heading">Who we are</h1>
-
+            <svg class="scroll-y scrolling-svg scrolling-svg-3" width="356" height="113" viewBox="0 0 356 113" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path class="scrolling-path" d="M1 60.9999C20.3333 61.3332 63.4 69.5999 81 99.9999C92.579 120 61.5 115 89.5 85.5C123.261 49.9303 178 41.9999 257 47.9999C336 53.9999 357 20 361 1" stroke="#9BA6EE"/>
+            </svg>
             <img src="<?php echo get_template_directory_uri(); ?>/img/image_13.png" alt="#" title="#" class="img_2">
             <img src="<?php echo get_template_directory_uri(); ?>/img/image_12.png" alt="#" title="#" class="img_3">
             <img src="<?php echo get_template_directory_uri(); ?>/img/image_14.png" alt="#" title="#" class="img_4">
@@ -34,7 +38,7 @@
             </div>
             <div class="column">
                 <p class="title">If you want to join our team, contact us. Let's rebuild the country together!</p>
-                <div class="btn-secondary">
+                <div class="btn btn-secondary">
                     <svg class="svg_icon btn_svg_2"> 
                         <use xlink:href="<?php echo get_template_directory_uri(); ?>/img/svg_map.svg#btn_svg_2" />
                     </svg>
@@ -100,7 +104,7 @@
                 <use xlink:href="<?php echo get_template_directory_uri(); ?>/img/svg_map.svg#svg_branch_4" />
             </svg>
             <p class="title">Let's Rebuild Ukraine Together </p>
-            <a href="#" class="btn-secondary">
+            <a href="#" class="btn btn-secondary">
                 <svg class="svg_icon btn_svg_2"> 
                     <use xlink:href="<?php echo get_template_directory_uri(); ?>/img/svg_map.svg#btn_svg_2" />
                 </svg>
@@ -160,7 +164,7 @@
                 </div>
             </div>
         </div>
-        <div class="btn-primary">
+        <div class="btn btn-primary">
             <span>See more</span>
         </div>
     </section>

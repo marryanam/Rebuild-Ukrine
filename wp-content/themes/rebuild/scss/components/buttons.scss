@@ -7,6 +7,14 @@
   cursor: pointer;
   overflow: hidden;
   z-index: 2;
+  .magnetic-area{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 150%;
+    height: 250%;
+  }
   *{
     cursor: pointer;
   }
@@ -18,7 +26,6 @@
     text-transform: uppercase;
   }
   &-primary{
-    @extend .btn;
     background: $yellow_1;
     color: $blue_1;
     border-radius: $border_radius;
@@ -54,7 +61,7 @@
     }
   }
   &-secondary{
-    @extend .btn, .btn-primary;
+    @extend .btn-primary;
     background: $blue_1;
     color: $white;
     width: fit-content;
@@ -70,8 +77,6 @@
     &:after{
       background: $blue_2;
     }
-  }
-  &-circle{
   }
   &-extra{
     @extend .btn;
@@ -132,6 +137,7 @@
     }
   }
   .swiper-button-prev, .swiper-button-next{
+    transition: $transition;
     --size: 68px;
     color: $white;
     font-size: 25px;
@@ -148,6 +154,7 @@
     top: unset;
     right: unset;
     bottom: unset;
+    overflow: hidden;
     &:after{
       font-size: 23px;
       top: 50%;
@@ -164,8 +171,22 @@
     &:not(:last-child){
       margin-right: var(--spacing_5);
     }
-    &:hover{
-      // color: $orange;
+    &:before{
+      transition:  $transition;
+      content: '';
+      border-radius: 100%;
+      position: absolute;
+      background: rgba(255, 255, 255, 0.3);
+      width: 100%;
+      height: 100%;
+      transform: translateX(-100%) translateY(-100%);
+      left: 0;
+      top: 0;
+    }
+    &.scale{
+      &:before{
+        transform: translateX(var(--left-x)) translateY(var(--top-y));
+      }
     }
   }
   .swiper-button-next{
@@ -197,3 +218,4 @@
     cursor: pointer;
   }
 }
+
