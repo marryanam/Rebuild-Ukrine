@@ -12,8 +12,9 @@
 ?>
 
 <footer>
-    <div class="container">
-        <div class="row block_1 scroll-y">
+    <?php if ( ! is_page_template('page-templates/page-contact.php') ) : ?>
+        <div class="container">
+            <div class="row block_1 scroll-y">
 
             <div class="column">
                 <p class="heading">Contacts</p>
@@ -45,44 +46,45 @@
             </div>
         </div>
 
-        <div class="row block_2">
-            <div class="column">
-                <ul>
-                    <li><a href="/">Who we are</a></li>
-                    <li><a href="/">Requests</a></li>
-                    <li><a href="/">Results</a></li>
-                    <li><a href="/">Partners</a></li>
-                    <li><a href="/">Contacts</a></li>
-                </ul>
-            </div>
-
-            <div class="column">
-                <div class="social">
-                    <a href="#">
-                        <svg class="svg_icon svg_social">
-                            <use xlink:href="<?php echo get_template_directory_uri(); ?>/img/svg_map.svg#svg_fb" />
-                        </svg>
-                    </a>
-                    <a href="#">
-                        <svg class="svg_icon svg_social">
-                            <use xlink:href="<?php echo get_template_directory_uri(); ?>/img/svg_map.svg#svg_twitter" />
-                        </svg>
-                    </a>
+            <div class="row block_2">
+                <div class="column">
+                    <ul>
+                        <li><a href="/">Who we are</a></li>
+                        <li><a href="/">Requests</a></li>
+                        <li><a href="/">Results</a></li>
+                        <li><a href="/">Partners</a></li>
+                        <li><a href="/">Contacts</a></li>
+                    </ul>
                 </div>
-                <div class="btn-primary">
-                    <svg class="svg_icon btn_svg_1">
-                        <use xlink:href="<?php echo get_template_directory_uri(); ?>/img/svg_map.svg#btn_svg_1" />
-                    </svg>
-                    <span>Donate</span>
+
+                <div class="column">
+                    <div class="social">
+                        <a href="#">
+                            <svg class="svg_icon svg_social">
+                                <use xlink:href="<?php echo get_template_directory_uri(); ?>/img/svg_map.svg#svg_fb" />
+                            </svg>
+                        </a>
+                        <a href="#">
+                            <svg class="svg_icon svg_social">
+                                <use xlink:href="<?php echo get_template_directory_uri(); ?>/img/svg_map.svg#svg_twitter" />
+                            </svg>
+                        </a>
+                    </div>
+                    <div class="btn-primary">
+                        <svg class="svg_icon btn_svg_1">
+                            <use xlink:href="<?php echo get_template_directory_uri(); ?>/img/svg_map.svg#btn_svg_1" />
+                        </svg>
+                        <span>Donate</span>
+                    </div>
                 </div>
             </div>
         </div>
-    </div>
+    <?php endif; ?>
 
     <div class="row block_3">
         <dov class="container">
             <p>© 2022 All rights reserved </p>
-            <a href="#">Privacy Policy</a>
+            <a href="<?php echo get_privacy_policy_url(); ?>">Privacy Policy</a>
         </dov>
     </div>
 
