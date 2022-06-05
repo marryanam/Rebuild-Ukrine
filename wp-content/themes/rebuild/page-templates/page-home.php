@@ -10,15 +10,15 @@
     <section class="section_1 scroll-y">
         <div class="container">
             <div class="column">
-                <h1 class="heading">
-                    <span>Let's rebuild </span>
-                    <span>
-                        <svg class="svg_icon svg_trident">
+                <h1 class="heading animated_title">
+                    <p>Let's rebuild </p>
+                    <div>
+                        <svg class="svg_icon svg_trident"> 
                             <use xlink:href="<?php echo get_template_directory_uri(); ?>/img/svg_map.svg#svg_trident" />
                         </svg>
-                        Ukraine
-                    </span>
-                    <span>together</span>
+                        <p>Ukraine </p>
+                    </div>
+                    <p>together</p>
                 </h1>
             </div>
             <div class="column">
