@@ -3,6 +3,27 @@
     padding-bottom: var(--spacing_2);
     margin-bottom: var(--spacing_4);
     border-bottom-left-radius: 100px;
+    section{
+        position: relative;
+        .scrolling-svg{
+            right: 0;
+            top: calc(var(--spacing_2) * -1);
+            @include breakpoint(sm) {
+                 right: calc(var(--spacing_2) * -1);
+            }
+            &-2{
+                right: 0;
+                bottom: calc(var(--spacing_8) * -1);
+                top: unset;
+                width: 100%;
+            }
+        }
+        .btn-primary{
+            justify-content: center;
+            width: fit-content;
+            margin: var(--spacing_2) auto 0;
+        }
+    }
     .container{
         .block_1{
             display: flex;

@@ -166,6 +166,19 @@
             }
         }
 
+        &_4{
+            position: relative;
+            .scrolling-svg{
+                top: calc(var(--spacing_2) * -1 - var(--spacing_8));
+                right: 0;
+                width: fit-content;
+                display: block;
+                @include breakpoint(md) {
+                    right: calc(var(--spacing_2) * -2);
+                }
+            }
+        }
+
         &_7{
             padding: var(--spacing_1) 0;
             margin-bottom: var(--spacing_3);
@@ -281,9 +294,19 @@
             }
         }
     }
+    .scrolling-svg{
+        right: 0;
+        bottom: 0;
+        width: 100%;
+    }
     .btn-primary{
         width: fit-content;
         justify-content: center;
         margin: 0 auto;
     }
+}
+
+.scrolling-svg{
+    position: absolute;
+    z-index: 1;
 }
