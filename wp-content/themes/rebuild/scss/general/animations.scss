@@ -27,3 +27,48 @@
     0% {transform: translate(0, 0);}
     100% { transform: translate(-100%, 0)}
 }
+
+@keyframes leftRight {
+  40% {
+    transform: translate(50px, 0) scale(.7);
+    opacity: 1;
+    color: $yellow_1;
+  }
+
+  60% {
+    color: $blue_1;
+  }
+
+  80% {
+    transform: translate(0) scale(2);
+    opacity: 0;
+  }
+
+  100% {
+    transform: translate(0) scale(1);
+    opacity: 1;
+  }
+}
+
+@keyframes sideSlide {
+  60% {
+    transform: translate(20px, 0) scale(1);
+    color: $yellow_1;
+  }
+
+  80% {
+    transform: translate(20px, 0) scale(1);
+    color: $yellow_1;
+  }
+
+  99% {
+    transform: translate(0) scale(1.2);
+    color: $black;
+  }
+
+  100% {
+    transform: translate(0) scale(1);
+    opacity: 1;
+    color: $black;
+  }
+}

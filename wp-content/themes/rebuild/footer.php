@@ -69,7 +69,7 @@
                         </svg>
                     </a>
                 </div>
-                <div class="btn-primary">
+                <div class="btn btn-primary">
                     <svg class="svg_icon btn_svg_1">
                         <use xlink:href="<?php echo get_template_directory_uri(); ?>/img/svg_map.svg#btn_svg_1" />
                     </svg>

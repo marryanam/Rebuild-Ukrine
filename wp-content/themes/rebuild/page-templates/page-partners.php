@@ -36,7 +36,7 @@
                     <p>Благодійний фонд “Крила надії”</p>
                 </div>
             </div>
-            <div class="btn-primary">
+            <div class="btn btn-primary">
                 <span>See more</span>
             </div>
         </div>

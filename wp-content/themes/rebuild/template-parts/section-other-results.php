@@ -26,7 +26,7 @@
         </div>
     </div>
 
-    <div class="btn-primary">
+    <div class="btn btn-primary">
         <span>All results</span>
     </div>
 </section>

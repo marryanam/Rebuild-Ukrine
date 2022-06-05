@@ -34,7 +34,7 @@
             </div>
             <div class="column">
                 <p class="title">If you want to join our team, contact us. Let's rebuild the country together!</p>
-                <div class="btn-secondary">
+                <div class="btn btn-secondary">
                     <svg class="svg_icon btn_svg_2"> 
                         <use xlink:href="<?php echo get_template_directory_uri(); ?>/img/svg_map.svg#btn_svg_2" />
                     </svg>
@@ -100,7 +100,7 @@
                 <use xlink:href="<?php echo get_template_directory_uri(); ?>/img/svg_map.svg#svg_branch_4" />
             </svg>
             <p class="title">Let's Rebuild Ukraine Together </p>
-            <a href="#" class="btn-secondary">
+            <a href="#" class="btn btn-secondary">
                 <svg class="svg_icon btn_svg_2"> 
                     <use xlink:href="<?php echo get_template_directory_uri(); ?>/img/svg_map.svg#btn_svg_2" />
                 </svg>
@@ -160,7 +160,7 @@
                 </div>
             </div>
         </div>
-        <div class="btn-primary">
+        <div class="btn btn-primary">
             <span>See more</span>
         </div>
     </section>
