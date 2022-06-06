@@ -17,26 +17,12 @@
 
 <main class="page-wrapper">
 
-    <?php while ( have_posts() ) : the_post(); ?>
+    <?php while ( have_posts() ) : the_post();
 
-        <section class="section_1 scroll-y">
-            <div class="container">
-                <?php rebuild_post_thumbnail(); ?>
+        get_template_part('template-parts/', 'content', get_post_type());
 
-                <div class="row">
-                    <span><?php rebuild_posted_on(); ?></span>
-                </div>
-
-                <p class="heading"><?php the_title(); ?></p>
-
-                <div class="content editor">
-                    <?php the_content(); ?>
-                </div>
-            </div>
-        </section>
-
-    <?php endwhile; ?>
+    endwhile; ?>
 
 </main>
 
-<?php get_footer();
+<?php get_footer(); ?>

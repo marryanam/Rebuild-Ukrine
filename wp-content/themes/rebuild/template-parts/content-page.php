@@ -11,7 +11,9 @@
 
 <section class="section_1 scroll-y">
     <div class="container">
-        <p class="heading"><?php the_title(); ?></p>
+        <p class="heading">
+            <?php the_title(); ?>
+        </p>
 
         <div class="content editor">
 		    <?php the_content(); ?>

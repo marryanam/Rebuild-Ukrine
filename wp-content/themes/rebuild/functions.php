@@ -189,12 +189,10 @@ if ( defined( 'JETPACK__VERSION' ) ) {
  * PayPal API.
  */
 require get_template_directory() . '/inc/PayPal.php';
-
-if (! is_admin()) {
-
-$paypal = new PayPal();
-echo '<pre>';
-print_r($paypal->get_paypal_api());
-echo '</pre>';
-
-}
+//
+//if (! is_admin()) {
+//    $paypal = new PayPal();
+//    echo '<pre>';
+//    print_r($paypal->get_paypal_api());
+//    echo '</pre>';
+//}
