@@ -83,7 +83,15 @@ define( 'WP_DEBUG', false );
 
 /* Add any custom values between this line and the "stop editing" line. */
 
+/**
+ * Only 10 revisions
+ */
+define( 'WP_POST_REVISIONS', 10 );
 
+/**
+ * Activate PayPal sandbox
+ */
+define( 'PAYPAL_SANDBOX', true );
 
 /* That's all, stop editing! Happy publishing. */
 
