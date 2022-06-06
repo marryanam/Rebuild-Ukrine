@@ -3,18 +3,16 @@
  * The template for displaying all posts
  *
  * @link https://developer.wordpress.org/themes/basics/template-hierarchy/#single-post
- *
- * @package rebuild
  */
 ?>
 
 <?php get_header(); ?>
 
-<main class="page-wrapper results_inner_page">
+<main class="page-wrapper">
 
     <?php while ( have_posts() ) : the_post();
 
-        get_template_part('template-parts/section', 'content');
+        get_template_part('template-parts/', 'content', get_post_type());
 
     endwhile; ?>
 

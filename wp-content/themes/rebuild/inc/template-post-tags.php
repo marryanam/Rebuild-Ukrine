@@ -45,7 +45,6 @@ function rebuild_support_button() {
     <?php
 }
 
-
 /**
  * Prints HTML with meta information for the categories, tags and comments.
  */

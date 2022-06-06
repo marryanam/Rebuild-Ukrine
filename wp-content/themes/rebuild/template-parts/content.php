@@ -9,6 +9,21 @@
 
 ?>
 
-<a href="<?php the_permalink(); ?>" class="swiper-item">
-    <?php the_content(); ?>
-</a>
+<section class="section_1 scroll-y">
+    <div class="container">
+        <?php rebuild_post_thumbnail(); ?>
+
+        <div class="row">
+            <span><?php rebuild_posted_on(); ?></span>
+            <span>From <?php the_field('city'); ?></span>
+        </div>
+
+        <p class="heading">
+            <?php the_title(); ?>
+        </p>
+
+        <div class="content editor">
+            <?php the_content(); ?>
+        </div>
+    </div>
+</section>
