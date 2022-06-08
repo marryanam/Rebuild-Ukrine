@@ -8,11 +8,11 @@
 
 <?php get_header(); ?>
 
-<main class="page-wrapper">
+<main class="page-wrapper results_inner_page">
 
     <?php while ( have_posts() ) : the_post();
 
-        get_template_part('template-parts/', 'content', get_post_type());
+        get_template_part('template-parts/content', get_post_type());
 
     endwhile; ?>
 
