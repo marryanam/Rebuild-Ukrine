@@ -21,9 +21,11 @@
                 ]); ?>
 
             </div>
+
             <svg class="scrolling-svg" width="1440" height="261" viewBox="0 0 1440 261" fill="none" xmlns="http://www.w3.org/2000/svg">
                 <path class="scrolling-path" d="M1471 1C1464.71 47.9316 1351 124.553 1147.03 100.455C954.256 77.6795 872.537 9.35257 755.195 54.9038C637.854 100.455 516.322 174.994 384.313 131.513C252.304 88.0321 279.851 50.7624 294.5 69.5C316 97 245 287 -13 257" stroke="#9BA6EE" stroke-linecap="round" stroke-linejoin="round"/>
             </svg>
+
             <div class="btn btn-primary">
                 <span>See more</span>
             </div>

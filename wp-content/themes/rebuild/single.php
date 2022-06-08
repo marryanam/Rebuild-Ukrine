@@ -18,7 +18,7 @@
 
     <?php get_template_part('template-parts/section', 'cta'); ?>
 
-    <?php get_template_part('template-parts/section', 'other-results'); ?>
+    <?php get_template_part('template-parts/section', 'results'); ?>
 
 </main>
 

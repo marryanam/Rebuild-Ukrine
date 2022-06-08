@@ -8,86 +8,66 @@
  *
  * @package rebuild
  */
-
 ?>
 
 <footer>
     <?php if ( ! is_page_template('page-templates/page-contact.php') ) : ?>
         <div class="container">
             <div class="row block_1 scroll-y">
+                <div class="column">
+                    <p class="heading">Contacts</p>
+                    <div class="svg_warp">
+                        <div class='half-circle half-circle-1 red md'></div>
+                        <div class='half-circle half-circle-2 yellow md'></div>
+                    </div>
+                </div>
 
-            <div class="column">
-                <p class="heading">Contacts</p>
-                <div class="svg_warp">
-                    <div class='half-circle half-circle-1 red md'></div>
-                    <div class='half-circle half-circle-2 yellow md'></div>
+                <div class="column">
+                    <div class="group">
+                        <svg class="svg_icon svg_phone">
+                            <use xlink:href="<?php echo get_template_directory_uri();  ?>/img/svg_map.svg#svg_phone" />
+                        </svg>
+                        <a href="tel:<?php the_field('phone', 'contact'); ?>" class="subtitle_1">
+                            <?php the_field('phone', 'contact'); ?>
+                        </a>
+                    </div>
+
+                    <div class="group">
+                        <svg class="svg_icon svg_email">
+                            <use xlink:href="<?php echo get_template_directory_uri();  ?>/img/svg_map.svg#svg_email" />
+                        </svg>
+                        <a href="mailto:<?php the_field('email', 'contact'); ?>"class="subtitle_1">
+                            <?php the_field('email', 'contact'); ?>
+                        </a>
+                    </div>
+
+                    <div class="group">
+                        <svg class="svg_icon svg_adress">
+                            <use xlink:href="<?php echo get_template_directory_uri();  ?>/img/svg_map.svg#svg_adress" />
+                        </svg>
+                        <span class="subtitle_1">
+                            <?php the_field('address', 'contact'); ?>
+                        </span>
+                    </div>
                 </div>
             </div>
-
-            <div class="column">
-                <div class="group">
-                    <svg class="svg_icon svg_phone">
-                        <use xlink:href="<?php echo get_template_directory_uri(); ?>/img/svg_map.svg#svg_phone" />
-                    </svg>
-                    <a href="tel:2139266627" class="subtitle_1">213 926-6627</a>
-                </div>
-                <div class="group">
-                    <svg class="svg_icon svg_email">
-                        <use xlink:href="<?php echo get_template_directory_uri(); ?>/img/svg_map.svg#svg_email" />
-                    </svg>
-                    <a href="mailto:support@shellholster.com" class="subtitle_1">info@rebuildukraine.org</a>
-                </div>
-                <div class="group">
-                    <svg class="svg_icon svg_adress">
-                        <use xlink:href="<?php echo get_template_directory_uri(); ?>/img/svg_map.svg#svg_adress" />
-                    </svg>
-                    <span class="subtitle_1">310 Hampton Rd, Hatboro, PA 19040</span>
-                </div>
-            </div>
-        </div>
 
             <div class="row block_2">
                 <div class="column">
-                    <ul>
-                        <li><a href="/">Who we are</a></li>
-                        <li><a href="/">Requests</a></li>
-                        <li><a href="/">Results</a></li>
-                        <li><a href="/">Partners</a></li>
-                        <li><a href="/">Contacts</a></li>
-                    </ul>
+                    <?php wp_nav_menu([
+                        'theme_location'  => 'menu-primary',
+                        'menu_id'         => 'footer-menu',
+                        'container'       => false,
+                        'menu_class'      => ''
+                    ]) ?>
                 </div>
 
                 <div class="column">
-                    <div class="social">
-                        <a href="#">
-                            <svg class="svg_icon svg_social">
-                                <use xlink:href="<?php echo get_template_directory_uri(); ?>/img/svg_map.svg#svg_fb" />
-                            </svg>
-                        </a>
-                        <a href="#">
-                            <svg class="svg_icon svg_social">
-                                <use xlink:href="<?php echo get_template_directory_uri(); ?>/img/svg_map.svg#svg_twitter" />
-                            </svg>
-                        </a>
-                    </div>
-                    <div class="btn-primary">
-                        <svg class="svg_icon btn_svg_1">
-                            <use xlink:href="<?php echo get_template_directory_uri(); ?>/img/svg_map.svg#btn_svg_1" />
-                        </svg>
+                    <?php rebuild_socials_buttons(); ?>
 
-                    </a>
-                    <a href="#">
-                        <svg class="svg_icon svg_social">
-                            <use xlink:href="<?php echo get_template_directory_uri(); ?>/img/svg_map.svg#svg_twitter" />
-                        </svg>
-                    </a>
+                    <?php rebuild_donate_button(); ?>
                 </div>
-                <div class="btn btn-primary">
-                    <svg class="svg_icon btn_svg_1">
-                        <use xlink:href="<?php echo get_template_directory_uri(); ?>/img/svg_map.svg#btn_svg_1" />
-                    </svg>
-                    <span>Donate</span>
-                </div>
+
             </div>
         </div>
     <?php endif; ?>
