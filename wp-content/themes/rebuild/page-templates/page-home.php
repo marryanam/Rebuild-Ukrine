@@ -21,14 +21,17 @@
                     <p>together</p>
                 </h1>
             </div>
+
             <div class="column">
                 <div class="group">
                     <svg class="svg_icon svg_branch">
                         <use xlink:href="<?php echo get_template_directory_uri(); ?>/img/svg_map.svg#svg_branch" />
                     </svg>
                     <div class="img_wrap">
+
                         <img src="<?php echo get_template_directory_uri(); ?>/img/image_3.png" alt="#" title="#">
                     </div>
+
                     <svg class="svg_icon svg_flower">
                         <use xlink:href="<?php echo get_template_directory_uri(); ?>/img/svg_map.svg#svg_flower" />
                     </svg>
@@ -44,15 +47,8 @@
                 </defs>
             </svg>
         </div>
-        <a href="#" class="btn btn-secondary">
-            <svg class="svg_icon btn_svg_2">
-                <use xlink:href="<?php echo get_template_directory_uri(); ?>/img/svg_map.svg#btn_svg_2" />
-            </svg>
-            <span>Support</span>
-            <svg class="svg_icon btn_svg_2">
-                <use xlink:href="<?php echo get_template_directory_uri(); ?>/img/svg_map.svg#btn_svg_3" />
-            </svg>
-        </a>
+
+        <?php rebuild_support_button(); ?>
     </section>
 
     <section class="section_2 half-circle-list scroll-y">
@@ -86,30 +82,16 @@
             <svg class="svg_icon svg_hand">
                 <use xlink:href="<?php echo get_template_directory_uri(); ?>/img/svg_map.svg#svg_hand" />
             </svg>
-            <form>
-                <p class="heading">I need help</p>
-                <p class="subtitle_3">Here you can fill out your application and get help</p>
-                <fieldset>
-                    <label>Name</label>
-                    <input type="text">
-                </fieldset>
-                <fieldset>
-                    <label>Email</label>
-                    <input type="email">
-                </fieldset>
-                <fieldset>
-                    <label>Text</label>
-                    <textarea></textarea>
-                </fieldset>
-                <button class="btn btn-primary" type="submit"><span>Send</span></button>
-            </form>
+
+            <?php echo do_shortcode( get_field('form', 'contact') ); ?>
+
             <svg class="svg_icon svg_branch_2">
                 <use xlink:href="<?php echo get_template_directory_uri(); ?>/img/svg_map.svg#svg_branch_2" />
             </svg>
         </div>
     </section>
 
-    <section class="section_4 scroll-y tickerLine">
+    <section class="section_4 tickerLine scroll-y">
         <div class="ticker">
             <p class="heading">are you a volunteer?</p>
         </div>
@@ -140,192 +122,9 @@
         </div>
     </section>
 
-    <section class="section_6 slider_1">
-        <div class="container">
-            <div class="heading_wrap">
-                <p class="heading">results</p>
-                <div class="swiper_buttons slider-blog_btns">
-                    <div class="swiper-button-prev"></div>
-                    <div class="swiper-button-next"></div>
-                </div>
-            </div>
-        </div>
-        <div class="swiper-container swiper slider-blog">
-            <div class="swiper-wrapper">
-                <div class="swiper-slide">
-                    <a href="#" class="swiper-item">
-                        <div class="img_wrap"><img src="<?php echo get_template_directory_uri(); ?>/img/image_6.png" alt="#" title="#"></div>
-                        <div class="info">
-                            <span>April 9, 2022</span>
-                            <span>From Kyiv</span>
-                        </div>
-                        <p class="subtitle_3">Mothers’ March, Mariupol Flashmob, and Flag Raising: Razom’s Advocacy Razoms  Razoms Razoms Work...</p>
-                    </a>
-                </div>
-                <div class="swiper-slide">
-                    <a href="#" class="swiper-item">
-                        <div class="img_wrap"><img src="<?php echo get_template_directory_uri(); ?>/img/image_6.png" alt="#" title="#"></div>
-                        <div class="info">
-                            <span>April 9, 2022</span>
-                            <span>From Kyiv</span>
-                        </div>
-                        <p class="subtitle_3">Mothers’ March, Mariupol Flashmob, and Flag Raising: Razom’s Advocacy Razoms  Razoms Razoms Work...</p>
-                    </a>
-                </div>
-                <div class="swiper-slide">
-                    <a href="#" class="swiper-item">
-                        <div class="img_wrap"><img src="<?php echo get_template_directory_uri(); ?>/img/image_6.png" alt="#" title="#"></div>
-                        <div class="info">
-                            <span>April 9, 2022</span>
-                            <span>From Kyiv</span>
-                        </div>
-                        <p class="subtitle_3">Mothers’ March, Mariupol Flashmob, and Flag Raising: Razom’s Advocacy Razoms  Razoms Razoms Work...</p>
-                    </a>
-                </div>
-                <div class="swiper-slide">
-                    <a href="#" class="swiper-item">
-                        <div class="img_wrap"><img src="<?php echo get_template_directory_uri(); ?>/img/image_6.png" alt="#" title="#"></div>
-                        <div class="info">
-                            <span>April 9, 2022</span>
-                            <span>From Kyiv</span>
-                        </div>
-                        <p class="subtitle_3">Mothers’ March, Mariupol Flashmob, and Flag Raising: Razom’s Advocacy Razoms  Razoms Razoms Work...</p>
-                    </a>
-                </div>
-                <div class="swiper-slide">
-                    <a href="#" class="swiper-item">
-                        <div class="img_wrap"><img src="<?php echo get_template_directory_uri(); ?>/img/image_6.png" alt="#" title="#"></div>
-                        <div class="info">
-                            <span>April 9, 2022</span>
-                            <span>From Kyiv</span>
-                        </div>
-                        <p class="subtitle_3">Mothers’ March, Mariupol Flashmob, and Flag Raising: Razom’s Advocacy Razoms  Razoms Razoms Work...</p>
-                    </a>
-                </div>
-            </div>
-        </div>
-        <div class="btn btn-primary">
-            <span>All results </span>
-        </div>
-    </section>
+    <?php get_template_part('template-parts/section', 'results'); ?>
 
-    <section class="section_7 linear_bg">
-        <div class="container">
-            <div class="column">
-                <p class="heading">Faq</p>
-                <svg class="svg_icon svg_branch_3">
-                    <use xlink:href="<?php echo get_template_directory_uri(); ?>/img/svg_map.svg#svg_branch_3" />
-                </svg>
-            </div>
-            <div class="column">
-                <ul class="faq">
-                    <li class="faq_item">
-                        <div class="faq_title">
-                            <span class="subtitle_1">How can you support this project?</span>
-                            <div class="faq_btn">
-                                <svg class="svg_icon svg_faq">
-                                    <use xlink:href="<?php echo get_template_directory_uri(); ?>/img/svg_map.svg#svg_faq" />
-                                </svg>
-                            </div>
-                        </div>
-                        <div class="faq_content_cover">
-                            <div class="faq_content">
-                                <p>We created this project to provide urgent help and support in face of an extreme and unforeseen situation in Ukraine. We created this project to provide urgent help and support in face of an extreme and unforeseen situation in Ukraine.</p>
-                                <p>Support in face of an extreme and unforeseen situation in Ukraine. We created this project to provide urgent help and support in face.</p>
-                            </div>
-                        </div>
-                    </li>
-                    <li class="faq_item">
-                        <div class="faq_title">
-                            <span class="subtitle_1">How can you created this project to provide urgent help?</span>
-                            <div class="faq_btn">
-                                <svg class="svg_icon svg_faq">
-                                    <use xlink:href="<?php echo get_template_directory_uri(); ?>/img/svg_map.svg#svg_faq" />
-                                </svg>
-                            </div>
-                        </div>
-                        <div class="faq_content_cover">
-                            <div class="faq_content">
-                                <p>We created this project to provide urgent help and support in face of an extreme and unforeseen situation in Ukraine. We created this project to provide urgent help and support in face of an extreme and unforeseen situation in Ukraine.</p>
-                                <p>Support in face of an extreme and unforeseen situation in Ukraine. We created this project to provide urgent help and support in face.</p>
-                            </div>
-                        </div>
-                    </li>
-                    <li class="faq_item">
-                        <div class="faq_title">
-                            <span class="subtitle_1">What is it rebuilding the country together?</span>
-                            <div class="faq_btn">
-                                <svg class="svg_icon svg_faq">
-                                    <use xlink:href="<?php echo get_template_directory_uri(); ?>/img/svg_map.svg#svg_faq" />
-                                </svg>
-                            </div>
-                        </div>
-                        <div class="faq_content_cover">
-                            <div class="faq_content">
-                                <p>We created this project to provide urgent help and support in face of an extreme and unforeseen situation in Ukraine. We created this project to provide urgent help and support in face of an extreme and unforeseen situation in Ukraine.</p>
-                                <p>Support in face of an extreme and unforeseen situation in Ukraine. We created this project to provide urgent help and support in face.</p>
-                            </div>
-                        </div>
-                    </li>
-                    <li class="faq_item">
-                        <div class="faq_title">
-                            <span class="subtitle_1">How can you support this project?</span>
-                            <div class="faq_btn">
-                                <svg class="svg_icon svg_faq">
-                                    <use xlink:href="<?php echo get_template_directory_uri(); ?>/img/svg_map.svg#svg_faq" />
-                                </svg>
-                            </div>
-                        </div>
-                        <div class="faq_content_cover">
-                            <div class="faq_content">
-                                <p>We created this project to provide urgent help and support in face of an extreme and unforeseen situation in Ukraine. We created this project to provide urgent help and support in face of an extreme and unforeseen situation in Ukraine.</p>
-                                <p>Support in face of an extreme and unforeseen situation in Ukraine. We created this project to provide urgent help and support in face.</p>
-                            </div>
-                        </div>
-                    </li>
-                    <li class="faq_item">
-                        <div class="faq_title">
-                            <span class="subtitle_1">How can you support this project?</span>
-                            <div class="faq_btn">
-                                <svg class="svg_icon svg_faq">
-                                    <use xlink:href="<?php echo get_template_directory_uri(); ?>/img/svg_map.svg#svg_faq" />
-                                </svg>
-                            </div>
-                        </div>
-                        <div class="faq_content_cover">
-                            <div class="faq_content">
-                                <p>We created this project to provide urgent help and support in face of an extreme and unforeseen situation in Ukraine. We created this project to provide urgent help and support in face of an extreme and unforeseen situation in Ukraine.</p>
-                                <p>Support in face of an extreme and unforeseen situation in Ukraine. We created this project to provide urgent help and support in face.</p>
-                            </div>
-                        </div>
-                    </li>
-                    <li class="faq_item">
-                        <div class="faq_title">
-                            <span class="subtitle_1">How can you support this project?</span>
-                            <div class="faq_btn">
-                                <svg class="svg_icon svg_faq">
-                                    <use xlink:href="<?php echo get_template_directory_uri(); ?>/img/svg_map.svg#svg_faq" />
-                                </svg>
-                            </div>
-                        </div>
-                        <div class="faq_content_cover">
-                            <div class="faq_content">
-                                <p>We created this project to provide urgent help and support in face of an extreme and unforeseen situation in Ukraine. We created this project to provide urgent help and support in face of an extreme and unforeseen situation in Ukraine.</p>
-                                <p>Support in face of an extreme and unforeseen situation in Ukraine. We created this project to provide urgent help and support in face.</p>
-                            </div>
-                        </div>
-                    </li>
-                </ul>
-                <div class="btn-extra">
-                    <span>Read more</span>
-                    <svg class="svg_icon svg_arrow">
-                        <use xlink:href="<?php echo get_template_directory_uri(); ?>/img/svg_map.svg#svg_arrow" />
-                    </svg>
-                </div>
-            </div>
-        </div>
-        <img src="<?php echo get_template_directory_uri(); ?>/img/logo_4.svg" alt="#" title="#"/>
-    </section>
+    <?php get_template_part('template-parts/section', 'faqs'); ?>
 </main>
 
 <?php get_footer(); ?>

@@ -79,7 +79,7 @@ $table_prefix = 'wp_';
  *
  * @link https://wordpress.org/support/article/debugging-in-wordpress/
  */
-define( 'WP_DEBUG', false );
+define( 'WP_DEBUG', true );
 
 /* Add any custom values between this line and the "stop editing" line. */
 
@@ -87,6 +87,11 @@ define( 'WP_DEBUG', false );
  * Only 10 revisions
  */
 define( 'WP_POST_REVISIONS', 10 );
+
+/**
+ * Remove <p> wrapper on contact form 7
+ */
+define('WPCF7_AUTOP', false );
 
 /**
  * Activate PayPal sandbox

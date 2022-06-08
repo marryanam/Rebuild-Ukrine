@@ -146,6 +146,12 @@ function rebuild_scripts() {
 	wp_enqueue_script( 'jquery', 'https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js', array(), null, true );
 	wp_enqueue_script( 'google-maps', 'https://maps.googleapis.com/maps/api/js?key=AIzaSyBHv7iI3_z0gzKy83nXBgO0Dn9zDVGQs6A', array(), null, true );
     wp_enqueue_script( 'main-script', get_template_directory_uri() . '/js/main.js', array(), _S_VERSION, true );
+    wp_enqueue_script( 'load-more', get_template_directory_uri() . '/js/load_more.js', array(), _S_VERSION, true );
+
+    // Load More
+//    wp_register_script( 'load-more', get_stylesheet_directory_uri() . '/js/load_more.js', array( 'jquery' ));
+//    wp_localize_script( 'load-more', 'loadmore', [ 'ajaxurl' => admin_url( 'admin-ajax.php' ) ]);
+//    wp_enqueue_script( 'load-more' );
 
 	if ( is_singular() && comments_open() && get_option( 'thread_comments' ) ) {
 		wp_enqueue_script( 'comment-reply' );
@@ -171,7 +177,12 @@ require get_template_directory() . '/inc/template-post-types.php';
 /**
  *  Custom template tags for this theme
  */
-require get_template_directory() . '/inc/template-post-tags.php';
+require get_template_directory() . '/inc/template-tags.php';
+
+/**
+ * Load more posts.
+ */
+require get_template_directory() . '/inc/loadmore_ajax.php';
 
 /**
  * Customizer additions.

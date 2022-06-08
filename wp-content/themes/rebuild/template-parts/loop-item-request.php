@@ -4,6 +4,8 @@
  *
  * @link https://developer.wordpress.org/themes/basics/template-hierarchy/
  */
+
+$support_link = '#support';
 ?>
 
 <div class="request_item">
@@ -40,7 +42,7 @@
                 <p><?php the_field('about'); ?></p>
             </div>
 
-            <?php rebuild_support_button(); ?>
+            <?php rebuild_support_button($support_link); ?>
 
             <div class="btn-extra">
                 <span>Read more</span>
@@ -53,8 +55,8 @@
 
     <div class="bottom">
         <div class="cover">
-            <p>We created this project to provide urgent help and support in face of an extreme and unforeseen situation in Ukraine. We created this project to provide urgent help and support in face of an extreme and unforeseen situation in Ukraine. We created this project to provide urgent help and support in face of an extreme and unforeseen situation in Ukraine.</p>
-            <p>Support in face of an extreme and unforeseen situation in Ukraine. We created this project to provide urgent help and support in face.We created this project to provide urgent help and support in face.</p>
+            <?php the_content(); ?>
+
             <div class="btn-extra">
                 <span>Hide</span>
                 <svg class="svg_icon svg_arrow">

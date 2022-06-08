@@ -19,7 +19,8 @@
             </svg>
             <img src="<?php echo get_template_directory_uri(); ?>/img/image_15.png" alt="#" title="#" class="img_1">
 
-            <h1 class="heading">Who we are</h1>
+            <h1 class="heading"><?php the_title(); ?></h1>
+
             <svg class="scroll-y scrolling-svg scrolling-svg-3" width="356" height="113" viewBox="0 0 356 113" fill="none" xmlns="http://www.w3.org/2000/svg">
                 <path class="scrolling-path" d="M1 60.9999C20.3333 61.3332 63.4 69.5999 81 99.9999C92.579 120 61.5 115 89.5 85.5C123.261 49.9303 178 41.9999 257 47.9999C336 53.9999 357 20 361 1" stroke="#9BA6EE"/>
             </svg>
@@ -103,16 +104,10 @@
             <svg class="svg_icon svg_branch_4"> 
                 <use xlink:href="<?php echo get_template_directory_uri(); ?>/img/svg_map.svg#svg_branch_4" />
             </svg>
+
             <p class="title">Let's Rebuild Ukraine Together </p>
-            <a href="#" class="btn btn-secondary">
-                <svg class="svg_icon btn_svg_2"> 
-                    <use xlink:href="<?php echo get_template_directory_uri(); ?>/img/svg_map.svg#btn_svg_2" />
-                </svg>
-                <span>Support</span>
-                <svg class="svg_icon btn_svg_2"> 
-                    <use xlink:href="<?php echo get_template_directory_uri(); ?>/img/svg_map.svg#btn_svg_3" />
-                </svg>
-            </a>
+
+            <?php rebuild_support_button(); ?>
         </div>
     </section>
 

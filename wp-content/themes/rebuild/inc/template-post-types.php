@@ -97,6 +97,14 @@ function add_new_post_types()
             'icon'          => 'dashicons-format-chat',
             'hierarchical'  => true,
             'position'      => 24
+        ],
+        [
+            'name'          => 'Partner',
+            'menu_name'     => 'Partners',
+            'slug'          => 'partner',
+            'icon'          => 'dashicons-groups',
+            'hierarchical'  => true,
+            'position'      => 25
         ]
 	];
 
