@@ -89,6 +89,11 @@ define( 'WP_DEBUG', false );
 define( 'WP_POST_REVISIONS', 10 );
 
 /**
+ * Remove <p> wrapper on contact form 7
+ */
+define('WPCF7_AUTOP', false );
+
+/**
  * Activate PayPal sandbox
  */
 define( 'PAYPAL_SANDBOX', true );
