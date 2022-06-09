@@ -132,25 +132,23 @@
                 content: '';
                 background: $blue_1;
                 width: 0;
-                height: 400px;
+                height: 600px;
                 position: absolute;
                 right: 0;
-                top: 38%;
+                bottom: 28%;
                 z-index: -1;
                 border-bottom-left-radius: 100px;
                 border-top-left-radius: 100px;
                 transition-delay: 1s;
-                @include breakpoint(xxl) {
-                   top: 35%;
-                }
-                 @include breakpoint(xxll) {
-                   top: 30%;
+                @include breakpoint(xxll) {
+                   bottom: 30%;
                 }
                 @include breakpoint(xl) {
-                   top: 25%;
+                    bottom: 35%;
                 }
                 @include breakpoint(lg) {
                     height: 300px;
+                    bottom: 41%;
                 }
                 @include breakpoint(md) {
                    top: 20%;

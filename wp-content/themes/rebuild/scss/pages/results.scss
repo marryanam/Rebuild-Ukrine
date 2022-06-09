@@ -12,7 +12,7 @@
             }
             &-2{
                 right: 0;
-                bottom: var(--spacing_2);
+                bottom: calc(var(--spacing_6) * -1);
                 top: unset;
                 width: 100%;
             }
