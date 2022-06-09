@@ -14,20 +14,13 @@
         </div>
 
         <div class="column">
-            <ul class="faq">
-
+            <ul class="faq" id="filterData">
                 <?php the_post_loop([
                     'post_type' => 'faq'
                 ]); ?>
-
             </ul>
 
-            <div class="btn-extra">
-                <span>Read more</span>
-                <svg class="svg_icon svg_arrow">
-                    <use xlink:href="<?php echo get_template_directory_uri(); ?>/img/svg_map.svg#svg_arrow" />
-                </svg>
-            </div>
+            <?php rebuild_load_more_button('link'); ?>
         </div>
     </div>
     <img src="<?php echo get_template_directory_uri(); ?>/img/logo_4.svg" alt="#" title="#"/>

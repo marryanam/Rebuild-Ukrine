@@ -1,5 +1,5 @@
 /**
- * Infinite scroll
+ * Load more btn
  */
 jQuery(function($)
 {
@@ -22,6 +22,7 @@ jQuery(function($)
             success:function(data){
                 if( data ) {
                     $('#filterData').append(data);
+                    loadBtn.find('span').text('See more');
                     paged++;
                     if (paged == max_pages) loadBtn.remove();
                 } else {

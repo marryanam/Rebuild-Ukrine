@@ -44,17 +44,16 @@
       }
     }
     &:after{
+      transition: 0.7s;
       content: '';
-      transition: $transition_2;
       border-radius: 100%;
-      width: 60%;
-      height: 200%;
       position: absolute;
-      left: 50%;
-      top: 10%;
-      transform: translateX(-50%) scale(0);
-      background: $yellow_2;
-      z-index: 1;
+      background: rgba(255, 255, 255, 0.3);
+      width: 100%;
+      height: 400%;
+      transform: translateX(-100%) translateY(-100%);
+      left: var(--left-x);
+      top: var(--top-y);
     }
     &-2{
       background: $blue_1;
@@ -76,6 +75,11 @@
     }
     &:after{
       background: $blue_2;
+    }
+  }
+  &.scale{
+    &:after{
+      transform: translateX(var(--left-x)) translateY(var(--top-y)) ;
     }
   }
   &-extra{
@@ -111,9 +115,9 @@
   }
   &:hover{
     &.btn-primary{
-      &:after{
-        transform: translateX(-50%) scale(2);
-      }
+      // &:after{
+      //   transform: translateX(-50%) scale(2);
+      // }
       &-2{
         background: $blue_2;
       }

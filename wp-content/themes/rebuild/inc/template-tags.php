@@ -31,7 +31,7 @@ function rebuild_post_thumbnail() {
  *
  * @param string $link
  */
-function rebuild_support_button( $link='' ) {
+function rebuild_support_button( string $link='' ) {
     $link = !empty($link) ? $link : get_field('support_link', 'contact');
     ?>
 
@@ -89,8 +89,10 @@ function rebuild_socials_buttons() {
 
 /**
  * Template part for displaying load-more btn
+ *
+ * @param string $type - button or link
  */
-function rebuild_load_more_button() {
+function rebuild_load_more_button( string $type = 'button' ) {
     global $wp_query;
 
     if ( $wp_query->max_num_pages > 1 ) : ?>
@@ -101,8 +103,21 @@ function rebuild_load_more_button() {
             var max_pages   = '<?php echo $wp_query->max_num_pages; ?>';
         </script>
 
-        <div class="btn btn-primary" id="loadMoreBtn" >
-            <span>See more</span>
-        </div>
+        <?php if ($type == 'button') : ?>
+
+            <div class="btn btn-primary" id="loadMoreBtn" >
+                <span>See more</span>
+            </div>
+
+        <?php elseif ($type == 'link') : ?>
+
+            <div class="btn-extra" id="loadMoreBtn">
+                <span>Read more</span>
+                <svg class="svg_icon svg_arrow">
+                    <use xlink:href="<?php echo get_template_directory_uri(); ?>/img/svg_map.svg#svg_arrow" />
+                </svg>
+            </div>
+
+        <?php endif;?>
     <?php endif;
 }
