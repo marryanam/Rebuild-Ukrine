@@ -1,6 +1,6 @@
 .btn{
   $border_radius: 100px;
-  transition: $transition;
+  transition: 0.5s;
   position: relative;
   display: flex;
   align-items: center;
@@ -67,10 +67,13 @@
     span{
       color: $white;
       @include breakpoint(sm) {
-        margin: 0 var(--spacing_7);
+        margin: 0 var(--spacing_7) !important;
       }
       + svg{
         margin-left: var(--spacing_12);
+        @include breakpoint(sm) {
+          margin: 0 !important;
+        }
       }
     }
     &:after{
@@ -141,7 +144,7 @@
     }
   }
   .swiper-button-prev, .swiper-button-next{
-    transition: $transition;
+    transition: 0.5s;
     --size: 68px;
     color: $white;
     font-size: 25px;
@@ -176,7 +179,7 @@
       margin-right: var(--spacing_5);
     }
     &:before{
-      transition:  $transition;
+      transition:  0.5s;
       content: '';
       border-radius: 100%;
       position: absolute;
