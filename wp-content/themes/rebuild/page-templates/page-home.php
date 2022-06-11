@@ -11,14 +11,14 @@
         <div class="container">
             <div class="column">
                 <h1 class="heading animated_title">
-                    <p>Let's rebuild </p>
+                    <p class="t1">Let's rebuild </p>
                     <div>
                         <svg class="svg_icon svg_trident">
                             <use xlink:href="<?php echo get_template_directory_uri(); ?>/img/svg_map.svg#svg_trident" />
                         </svg>
-                        <p>Ukraine </p>
+                        <p class="t2">Ukraine </p>
                     </div>
-                    <p>together</p>
+                    <p class="t3">together</p>
                 </h1>
             </div>
 
@@ -51,7 +51,7 @@
         <?php rebuild_support_button(); ?>
     </section>
 
-    <section class="section_2 half-circle-list scroll-y enter">
+    <section class="section_2 half-circle-list scroll-y">
         <div class="container">
             <div class="column">
                 <div class="half-circle half-circle-1 blue"></div>

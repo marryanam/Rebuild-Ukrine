@@ -1,6 +1,6 @@
 .faq{
     margin-bottom: var(--spacing_7);
-    margin-top: var(--spacing_7);
+    margin-top: var(--spacing_8);
     &_item{
         &:last-child{
             .faq_title{
@@ -30,7 +30,6 @@
 
     }
     &_title{
-        transition: $transition;
         display: flex;
         align-items: center;
         justify-content: space-between;
@@ -41,8 +40,7 @@
         }
     }
     &_content_cover{
-        transition: $transition;
-        transition-delay: 0.5s;
+        transition:  0.3s ease-in-out;
         padding-left: var(--spacing_10);
         height: 0px;
         overflow: hidden;
@@ -57,7 +55,7 @@
     }
     &_btn{
         svg{
-            transition: $transition;
+            transition:  0.3s ease-in-out;
         }
     }
 }
