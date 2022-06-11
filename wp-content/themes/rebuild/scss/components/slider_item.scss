@@ -78,3 +78,12 @@
         }
     }
 }
+
+.destroyed_slider{
+    .swiper-wrapper{
+        left: 0 !important;
+    }
+}
+.slider-blog_btns.destroyed_slider{
+    display: none !important;
+}

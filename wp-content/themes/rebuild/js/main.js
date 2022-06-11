@@ -298,14 +298,9 @@ jQuery(function($) {
                                 }
                             }
                         });
-                        // swipes.on('slideChange', function () {
-                        //     if ( swipes.activeIndex > swipes.previousIndex ) {
-                        //         console.log(_this.find(".swiper-container").prevObject[0], 'container333')
-                        //         _this.find(".swiper-container").prevObject[0].classList.add('showEl');
-                        //         _this.find(".swiper-container").prevObject[0].style.setProperty('overflow', "visible");
-                        //     }
-                        // });
-                        if(window.innerWidth < 768){
+                        if(window.innerWidth < 768 || swipes.slides.length <= 3){
+                            container.prevObject[0].classList.add('destroyed_slider');
+                            $('.slider-blog_btns').classList.add('destroyed_slider');
                             swipes.destroy();
                         }
                     }

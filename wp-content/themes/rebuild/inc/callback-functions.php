@@ -19,8 +19,6 @@ function the_post_loop( array $args = [], bool $slider = false ) {
         while ( have_posts() ) {
             the_post();
             get_template_part( 'template-parts/loop-item', get_post_type(), ['slider' => $slider] );
-            get_template_part( 'template-parts/loop-item', get_post_type(), ['slider' => $slider] );
-            get_template_part( 'template-parts/loop-item', get_post_type(), ['slider' => $slider] );
         }
 
     } else {

@@ -271,22 +271,24 @@
             @include breakpoint(xxll) {
                 left: calc((var(--container) / 2 * -1) + 20vw);
             }
-            @media (max-width:1240px) {
+            @media (max-width:1375px) {
                 left: 0;
             }
             @include breakpoint(md) {
                 flex-direction: column;
                 left: 0;
+                margin: 0;
+                padding: 0;
             }
         }
         .swiper-slide{
             @include breakpoint(md) {
                 width: fit-content;
-                margin: var(--spacing_6) auto;
+                margin: var(--spacing_6) auto !important;
             }
             &:nth-child(odd){
                 @include breakpoint(md) {
-                    margin: calc(var(--spacing_1) + var(--spacing_6)) auto  var(--spacing_6);
+                    margin: calc(var(--spacing_1) + var(--spacing_6)) auto  var(--spacing_6) !important;
                 }
             }
             &:first-child{
