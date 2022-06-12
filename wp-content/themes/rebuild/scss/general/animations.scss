@@ -58,6 +58,15 @@
   }
 }
 
+@keyframes news {
+  0% {transform: translateX(0);}
+  100% {transform: translateX(-4135px);}
+}
+@keyframes news_mobile {
+  0% {transform: translateX(0);}
+  100% {transform: translateX(-2135px);}
+}
+
 @keyframes sideSlide {
   60% {
     transform: translate(20px, 0) scale(1);

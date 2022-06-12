@@ -76,12 +76,19 @@
                 }
                 .scrolling-svg{
                     position: absolute;
-                    right: 4%;
-                    top: 10%;
+                    right: 3%;
+                    top: 18%;
                     z-index: 2;
+                    width: 73vw;
+                    @include breakpoint(xxl) {
+                        width: 89vw;
+                    }
+                    @include breakpoint(xxll) {
+                        width: 108vw;
+                    }
                     @include breakpoint(lg) {
                         width: 165% !important;
-                        right: -15%;
+                        right: -7%;
                     }
                     @include breakpoint(md) {
                         width: 255% !important;
@@ -128,7 +135,7 @@
                         left: 50%;
                         top: -22%;
                         transform: translateX(-50%);
-                        width: 27%;
+                        width: 24%;
                     }
                     @include breakpoint(sm) {
                         display: block;
@@ -311,6 +318,18 @@
         right: 0;
         bottom: calc(var(--spacing_4) * -1);
         width: 100%;
+        &-2{
+            right: 0;
+            bottom: calc(var(--spacing_6)*-1);
+            top: unset;
+            width: 100%;
+            @include breakpoint(xl) {
+                bottom: var(--spacing_6);
+            }
+            @include breakpoint(sm) {
+                transform: scale(2.5);
+            }
+        }
     }
     .btn-primary{
         width: fit-content;

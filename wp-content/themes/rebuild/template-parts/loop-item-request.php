@@ -39,7 +39,7 @@ $support_link = '#support';
                     <span><?php rebuild_posted_on(); ?></span>
                 </p>
                 <p class="subtitle_2"><?php the_field('name'); ?></p>
-                <p><?php the_field('about'); ?></p>
+                <p class="body_2"><?php the_field('about'); ?></p>
             </div>
 
             <?php rebuild_support_button($support_link); ?>

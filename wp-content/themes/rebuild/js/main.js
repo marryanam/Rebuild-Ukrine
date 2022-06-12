@@ -13,29 +13,29 @@ jQuery(function($) {
             });
         }
 
-        if($(".scrolling-path").length > 0){
-            let svgLine, svgLineLength, offset = 2;
-            Array.prototype.forEach.call($(".scrolling-path"), child => {
-                if($(".front-page").length > 0){
-                    offset = 7;
-                }
-                svgLine = child;
-                svgLineLength = child.getTotalLength();
-                child.style.strokeDasharray = svgLineLength;
-                child.style.strokeDashoffset = svgLineLength;
-                window.addEventListener("scroll", scrollSVG);
-                // var lastScrollpercent = 0;
-                function scrollSVG() {
-                    var scrollpercent = ((document.body.scrollTop + document.documentElement.scrollTop) / (document.documentElement.scrollHeight - document.documentElement.clientHeight)) * offset;
-
-                    // if (scrollpercent < lastScrollpercent) return;
-                    // lastScrollpercent = scrollpercent;
-
-                    var draw = svgLineLength * scrollpercent;
-                    child.style.strokeDashoffset = svgLineLength - draw;
-                }
-            });
-        }
+        // if($(".scrolling-path").length > 0){
+        //     let svgLine, svgLineLength, offset = 2;
+        //     Array.prototype.forEach.call($(".scrolling-path"), child => {
+        //         if($(".front-page").length > 0){
+        //             offset = 7;
+        //         }
+        //         svgLine = child;
+        //         svgLineLength = child.getTotalLength();
+        //         child.style.strokeDasharray = svgLineLength;
+        //         child.style.strokeDashoffset = svgLineLength;
+        //         window.addEventListener("scroll", scrollSVG);
+        //         // var lastScrollpercent = 0;
+        //         function scrollSVG() {
+        //             var scrollpercent = ((document.body.scrollTop + document.documentElement.scrollTop) / (document.documentElement.scrollHeight - document.documentElement.clientHeight)) * offset;
+        //
+        //             // if (scrollpercent < lastScrollpercent) return;
+        //             // lastScrollpercent = scrollpercent;
+        //
+        //             var draw = svgLineLength * scrollpercent;
+        //             child.style.strokeDashoffset = svgLineLength - draw;
+        //         }
+        //     });
+        // }
 
         if($(".btn").length > 0 && window.innerWidth > 1024){
             const btns = document.querySelectorAll(".btn, .swiper-button-prev, .swiper-button-next, .social svg");
@@ -300,7 +300,8 @@ jQuery(function($) {
                         });
                         if(window.innerWidth < 768 || swipes.slides.length <= 3){
                             container.prevObject[0].classList.add('destroyed_slider');
-                            $('.slider-blog_btns').classList.add('destroyed_slider');
+                            console.log($('.slider-blog_btns'), $('.slider-blog_btns')[0],  'pppp')
+                            $('.slider-blog_btns')[0].classList.add('destroyed_slider');
                             swipes.destroy();
                         }
                     }
@@ -317,15 +318,18 @@ jQuery(function($) {
         }
 
         if($(".insert_section").length > 0){
-            $.getScript("https://cdnjs.cloudflare.com/ajax/libs/waypoints/4.0.1/jquery.waypoints.js", function(){
+            countNumbers();
+        }
+
+        function countNumbers(){
+            $.getScript("https://cdnjs.cloudflare.com/ajax/libs/waypoints/2.0.2/waypoints.min.js", function(){
                 $.getScript("https://cdnjs.cloudflare.com/ajax/libs/Counter-Up/1.0.0/jquery.counterup.min.js", function(){
                     $('.insert_section span').counterUp({
-                        delay: 20,
+                        delay: 10,
                         time: 2000
                     });
                 });
             });
-
         }
 
     });

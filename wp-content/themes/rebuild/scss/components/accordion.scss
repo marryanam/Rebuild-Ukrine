@@ -2,6 +2,11 @@
     margin-bottom: var(--spacing_7);
     margin-top: var(--spacing_8);
     &_item{
+        @for $i from 1 through 50 {
+            &:nth-child(#{$i}) {
+                transition-delay: $i * 0.20s;
+            }
+        }
         &:last-child{
             .faq_title{
                 border-bottom: 1px solid $blue_3;

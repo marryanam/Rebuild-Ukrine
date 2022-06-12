@@ -7,7 +7,7 @@
 <section class="section_7 linear_bg scroll-y">
     <div class="container">
         <div class="column">
-            <p class="heading">Faq</p>
+            <p class="heading textShowUp">Faq</p>
             <svg class="svg_icon svg_branch_3">
                 <use xlink:href="<?php echo get_template_directory_uri(); ?>/img/svg_map.svg#svg_branch_3" />
             </svg>

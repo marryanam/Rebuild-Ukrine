@@ -6,7 +6,7 @@
  */
 ?>
 
-<li class="faq_item">
+<li class="faq_item textShowUp">
     <div class="faq_title">
         <span class="subtitle_1"><?php the_title(); ?></span>
 

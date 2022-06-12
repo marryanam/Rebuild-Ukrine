@@ -6,8 +6,8 @@ header{
   z-index: 15;
   transition: $transition;
   transform: translateY(0);
+  background: $white;
   &.header_bg{
-    background: rgba(255, 255, 255,1);
     a{
       cursor: pointer;
     }
@@ -189,6 +189,22 @@ header{
     .svg_burger_close{
       transform: translate(-50%, -50%) scale(1);
       pointer-events: all;
+    }
+  }
+}
+.page-template-page-partners, .page-template-page-requests{
+  header{
+    background:$blue_4;
+    &.header_bg{
+      background:$white;
+    }
+  }
+}
+.page-template-page-results{
+  header{
+    background:#e9f3ff;
+    &.header_bg{
+      background:$white;
     }
   }
 }

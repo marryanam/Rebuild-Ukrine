@@ -23,11 +23,9 @@
                     'post_type' => 'result'
                 ]); ?>
             </div>
-
-            <svg class="scrolling-svg" width="1440" height="261" viewBox="0 0 1440 261" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <path class="scrolling-path" d="M1471 1C1464.71 47.9316 1351 124.553 1147.03 100.455C954.256 77.6795 872.537 9.35257 755.195 54.9038C637.854 100.455 516.322 174.994 384.313 131.513C252.304 88.0321 279.851 50.7624 294.5 69.5C316 97 245 287 -13 257" stroke="#9BA6EE" stroke-linecap="round" stroke-linejoin="round"/>
-            </svg>
-
+            <?php if ( $wp_query->max_num_pages > 1 ) : ?>
+                <svg class="scroll-y scrolling-svg scrolling-svg-2 enter" id="loadMoreLine" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1920 228" fill="none">                <path class="scrolling-path" d="M0 201.424C53.7409 216.583 234.257 257.569 409.5 184.002C520.572 137.373 549.723 48.9732 534.5 29.5016C519.851 10.764 492.304 48.0337 624.313 91.5144C756.322 134.995 877.854 60.4567 995.195 14.9055C1112.54 -30.6458 1303.23 51.7245 1496 74.5001C1659.43 93.8084 1850.5 70.6199 1920 12.5446" stroke="#9BA6EE" stroke-linecap="round" stroke-linejoin="round"></path>            </svg>
+            <?php endif; ?>
             <?php rebuild_load_more_button(); ?>
         </div>
     </section>

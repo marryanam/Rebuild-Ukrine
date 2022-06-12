@@ -2,22 +2,37 @@
     .scrolling-svg{
         &-1{
             z-index: -1;
-            top: 40%;
-            left: 0;
+            top: 37%;
+            left: -15%;
             @include breakpoint(lg) {
-                display: none;
+                left: -45%;
+            }
+            @include breakpoint(md) {
+                left: -75%;
             }
         }
         &-3{
             z-index: -1;
-            top: 40%;
-            right: 0;
+            top: 37%;
+            right: -15%;
             @include breakpoint(lg) {
-                display: none;
+                right: -45%;
+            }
+            @include breakpoint(md) {
+                right: -75%;
             }
         }
         &-2{
+            right: 0;
+            bottom: calc(var(--spacing_6)*-1);
+            top: unset;
             width: 100%;
+            @include breakpoint(xl) {
+                bottom: var(--spacing_6);
+            }
+            @include breakpoint(sm) {
+                transform: scale(2.5);
+            }
         }
     }
     .section{
@@ -241,6 +256,7 @@
             background: $blue_1;
             padding: var(--spacing_2) 0 var(--spacing_4);
             margin-bottom: var(--spacing_2);
+            position: relative;
             .btn-primary{
                 justify-content: center;
                 width: fit-content;

@@ -12,9 +12,18 @@
             }
             &-2{
                 right: 0;
-                bottom: calc(var(--spacing_6) * -1);
+                bottom: calc(var(--spacing_7)*-1);
                 top: unset;
                 width: 100%;
+                @include breakpoint(xl) {
+                    bottom: var(--spacing_5);
+                }
+                @include breakpoint(md) {
+                    bottom: var(--spacing_3);
+                }
+                @include breakpoint(sm) {
+                    transform: scale(2.5);
+                }
             }
         }
     }

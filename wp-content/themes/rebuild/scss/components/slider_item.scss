@@ -20,6 +20,9 @@
             color: $blue_1;
         }
     }
+    .subtitle_3{
+        font-weight: 500;
+    }
     .info{
         display: flex;
         justify-content: space-between;
@@ -82,6 +85,14 @@
 .destroyed_slider{
     .swiper-wrapper{
         left: 0 !important;
+        display: flex;
+    }
+    .swiper-slide{
+        width: fit-content;
+    }
+    .swiper-item{
+        margin-left: 0;
+        margin-right: var(--spacing_10);
     }
 }
 .slider-blog_btns.destroyed_slider{
