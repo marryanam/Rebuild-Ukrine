@@ -190,10 +190,20 @@
         }
 
         &_7{
-            padding: var(--spacing_1) 0;
+            padding: var(--spacing_1) 0 calc(var(--spacing_1) * 5);
             margin-bottom: var(--spacing_3);
             @include breakpoint(sm) {
-                padding: 0 0 var(--spacing_1);
+                padding: 0 0 calc(var(--spacing_1) * 3);
+            }
+            > .scrolling-svg{
+                width: 65vw;
+                position: absolute;
+                bottom: 15%;
+                @include breakpoint(sm) {
+                    bottom: 20%;
+                    transform: scale(2);
+                    left: -21%;
+                }
             }
             .container{
                 display: flex;
@@ -275,13 +285,7 @@
             transform: none;
         }
         .swiper-wrapper{
-            left: calc((var(--container) / 2 * -1) + 8vw);
-            @include breakpoint(xxl) {
-                left: calc((var(--container) / 2 * -1) + 14vw);
-            }
-            @include breakpoint(xxll) {
-                left: calc((var(--container) / 2 * -1) + 20vw);
-            }
+            left: calc((100vw - var(--container)) / 2);
             @media (max-width:1375px) {
                 left: 0;
             }

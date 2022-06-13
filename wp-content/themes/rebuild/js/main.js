@@ -13,6 +13,31 @@ jQuery(function($) {
             });
         }
 
+        if($(".scrolling-path").length > 0){
+            let svgLine, svgLineLength, offset = 2;
+            Array.prototype.forEach.call($(".scrolling-path"), child => {
+                if($(".front-page").length > 0){
+                    offset = 7;
+                }
+                svgLine = child;
+                svgLineLength = child.getTotalLength();
+                child.style.strokeDasharray = svgLineLength;
+                child.style.strokeDashoffset = svgLineLength;
+                window.addEventListener("scroll", scrollSVG);
+                // var lastScrollpercent = 0;
+                function scrollSVG() {
+                    var scrollpercent = ((document.body.scrollTop + document.documentElement.scrollTop) / (document.documentElement.scrollHeight - document.documentElement.clientHeight)) * offset;
+
+                    // if (scrollpercent < lastScrollpercent) return;
+                    // lastScrollpercent = scrollpercent;
+
+                    var draw = svgLineLength * scrollpercent;
+                    child.style.strokeDashoffset = svgLineLength - draw;
+                }
+            });
+        }
+
+
         // if($(".scrolling-path").length > 0){
         //     let svgLine, svgLineLength, offset = 2;
         //     Array.prototype.forEach.call($(".scrolling-path"), child => {

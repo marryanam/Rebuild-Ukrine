@@ -233,3 +233,14 @@
         }
     }
 }
+svg.scroll-y.scrolling-svg{
+    &:not(.enter){
+
+    }
+}
+
+svg{
+    path{
+        transition: 0.5s;
+    }
+}
