@@ -139,7 +139,7 @@ add_action( 'widgets_init', 'rebuild_widgets_init' );
  */
 function rebuild_scripts() {
 	wp_enqueue_style( 'style', get_stylesheet_uri(), array(), _S_VERSION );
-	wp_enqueue_style( 'main-style', get_template_directory_uri(). '/css/main.css?v.394.6', array(), _S_VERSION );
+	wp_enqueue_style( 'main-style', get_template_directory_uri(). '/css/main.css?v.398.6', array(), _S_VERSION );
 	wp_enqueue_style( 'fontawesome', 'https://pro.fontawesome.com/releases/v5.10.0/css/all.css', array(), null );
 	wp_enqueue_style( 'montserrat-font', 'https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600&display=swap', array(), null );
 

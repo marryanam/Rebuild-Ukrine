@@ -97,6 +97,9 @@
                     @include breakpoint(sm) {
                         display: none;
                     }
+                    path{
+                        transition: 1.5s;
+                    }
                 }
             }
             .btn-secondary{
