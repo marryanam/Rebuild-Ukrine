@@ -70,6 +70,4 @@
         <path d="M843.172 283.637H835.321V256.019H843.172V258.045H837.351V281.611H843.172V283.637Z" fill="#F2C63B"/>
         <path d="M903.005 283.637H895.154V281.611H900.975V258.045H895.154V256.019H903.005V283.637Z" fill="#F2C63B"/>
     </svg>
-
-<!--    <img src="--><?php //echo get_template_directory_uri(); ?><!--/img/logo_4.svg" alt="#" title="#"/>-->
 </section>

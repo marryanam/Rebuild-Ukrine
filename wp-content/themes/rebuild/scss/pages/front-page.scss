@@ -88,17 +88,25 @@
                     }
                     @include breakpoint(lg) {
                         width: 165% !important;
-                        right: -7%;
+                        right: 0;
                     }
                     @include breakpoint(md) {
-                        width: 255% !important;
-                        top: 20%;
-                    }
-                    @include breakpoint(sm) {
                         display: none;
                     }
                     path{
                         transition: 1.5s;
+                    }
+                    &.svg-mobile{
+                        display: none;
+                        @include breakpoint(md) {
+                            display: block;
+                            width: 100%;
+                            top: 43%;
+                            right: 5%;
+                        }
+                        @include breakpoint(md) {
+                            right: 2%;
+                        }
                     }
                 }
             }
